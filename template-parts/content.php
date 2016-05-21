@@ -22,6 +22,9 @@
 		<div class="entry-meta">
 			<?php ajs_spb_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<div class="image-meta">
+			<?php ajs_spb_get_exif_info(); ?>
+		</div>
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
