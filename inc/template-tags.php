@@ -340,6 +340,30 @@ function ajs_spb_do_copyright_text() {
 	echo '<span class="copyright-text">' . wp_kses_post( $copyright_text ) . '</span>';
 }
 
+/*
+* Echo the EXIF Info for an image post
+* 
+* @since 1.0
+ */
+function ajs_spb_get_exif_info() {
+	if ( has_post_format( 'image' )) {
+		$post_thumbnail_id = get_post_thumbnail_id( $post_id );
+		$post_thumbnail_meta = wp_get_attachment_metadata ( $post_thumbnail_id );
+
+		if($post_thumbnail_meta['image_meta']['camera']){
+	
+	// Start the markup.
+	?>
+	<ul class="image-exif-list">
+		<li class="camera">Camera: <?php echo $post_thumbnail_meta['image_meta']['camera']; ?></li>
+		<li class="iso">ISO: <?php echo $post_thumbnail_meta['image_meta']['iso']; ?></li>
+		<li class="aperture">Aperture: <?php echo $post_thumbnail_meta['image_meta']['aperture']; ?></li>
+		<li class="shutter">Shutter: <?php echo ajs_spb_convert_decimal_to_fraction($post_thumbnail_meta); ?></li>
+		<li class="focal-length">Focal Length: <?php echo $post_thumbnail_meta['image_meta']['focal_length']; ?>mm</li>
+	</ul> <!-- .image-exif-list -->
+	<?php } }
+}
+
 /**
  * Build social sharing icons.
  *
