@@ -67,6 +67,8 @@ function ajs_spb_setup() {
 		'default-image' => '',
 	) ) );
 
+	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image'));
+
 	// Add styles to the post editor
 	add_editor_style( array( 'editor-style.css', ajs_spb_font_url() ) );
 
@@ -115,6 +117,24 @@ function ajs_spb_widgets_init() {
 
 }
 add_action( 'widgets_init', 'ajs_spb_widgets_init' );
+
+/*
+* Convert decimal shutter speeds to fractions
+*
+* @since 1.0
+ */
+function ajs_spb_convert_decimal_to_fraction($imagemeta) {
+	if ((1 / $imagemeta['image_meta']['shutter_speed']) > 1) {
+	echo "1/";
+		if (number_format((1 / $imagemeta['image_meta']['shutter_speed']), 1) ==  number_format((1 / $imagemeta['image_meta']['shutter_speed']), 0)) {
+			echo number_format((1 / $imagemeta['image_meta']['shutter_speed']), 0, '.', '') . ' sec';
+		} else {
+			echo number_format((1 / $imagemeta['image_meta']['shutter_speed']), 1, '.', '') . ' sec';
+		}
+	} else {
+		echo $imagemeta['image_meta']['shutter_speed'].' sec';
+	}
+}
 
 /**
  * Implement the Custom Header feature.
