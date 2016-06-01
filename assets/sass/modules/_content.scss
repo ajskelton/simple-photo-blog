@@ -76,6 +76,13 @@
 	
 }
 
+.index-description {
+	@include span(8 of 12);
+}
+.index-image {
+	@include span(4 of 12);
+}
+
 // Asides
 
 .blog .format-aside .entry-title,

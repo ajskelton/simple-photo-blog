@@ -101,8 +101,9 @@ function ajs_spb_widgets_init() {
 
 	// Define sidebars
 	$sidebars = array(
-		'sidebar-1'  => esc_html__( 'Sidebar 1', 'ajs_spb' ),
-	//	'sidebar-2'  => esc_html__( 'Sidebar 2', 'ajs_spb' ),
+		'index-description'  => esc_html__( 'Index Description', 'ajs_spb' ),
+		'index-image' => esc_html__( 'Index Image', 'ajs_spb' ),
+		'index-grid'  => esc_html__( 'Index Grid', 'ajs_spb' ),
 	//	'sidebar-3'  => esc_html__( 'Sidebar 3', 'ajs_spb' ),
 	);
 

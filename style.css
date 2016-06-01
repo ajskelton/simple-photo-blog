@@ -1027,7 +1027,19 @@ a:hover, a:focus, a:active {
   clear: both;
 }
 
-/* line 81, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 79, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+.index-description {
+  width: 66.6666666667%;
+  float: left;
+}
+
+/* line 82, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+.index-image {
+  width: 33.3333333333%;
+  float: left;
+}
+
+/* line 88, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none;

@@ -17,18 +17,15 @@ get_header(); ?>
 	<div class="wrap">
 		<div class="content-area">
 			<main id="main" class="site-main" role="main">
+
+				<?php get_sidebar('index-description'); ?>
+				<h2>Recent Photo Posts</h2>
 				<section class="gallery">
 
 			<?php
 			if ( have_posts() ) :
 
-				if ( is_home() && ! is_front_page() ) : ?>
-					<header>
-						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					</header>
-
-				<?php
-				endif;
+				
 
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
