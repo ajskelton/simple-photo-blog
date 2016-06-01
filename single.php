@@ -12,7 +12,6 @@ get_header(); ?>
 	<div class="wrap">
 		<div class="content-area">
 			<main id="main" class="site-main" role="main">
-			<?php ajs_spb_do_post_image( $size = 'full' ) ?>
 
 			<?php
 			while ( have_posts() ) : the_post();

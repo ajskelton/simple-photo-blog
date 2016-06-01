@@ -43,6 +43,7 @@ function ajs_spb_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 400, 400 );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -71,6 +72,9 @@ function ajs_spb_setup() {
 
 	// Add styles to the post editor
 	add_editor_style( array( 'editor-style.css', ajs_spb_font_url() ) );
+
+	// Add Custom Images Sizes
+	// add_image_size( 'index-grid', 400, 400, array( 'center', 'center' ) );
 
 }
 endif; // ajs_spb_setup

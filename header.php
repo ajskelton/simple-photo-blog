@@ -44,6 +44,16 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
+			<?php if ( is_front_page() && is_home() ) : ?>
+			<div id="custom-header" class="custom-header">
+				<?php if ( get_header_image() ) : ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+				</a>
+				<?php endif; // End header image check. ?>
+			</div>
+			<?php endif; ?>
+
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php ajs_spb_do_svg( array( 'icon' => 'bars', 'title' => 'Display Menu' ) ); ?><span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'ajs_spb' ); ?></span></button>
 				<?php

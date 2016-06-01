@@ -15,8 +15,9 @@
 get_header(); ?>
 
 	<div class="wrap">
-		<div class="primary content-area">
+		<div class="content-area">
 			<main id="main" class="site-main" role="main">
+				<section class="gallery">
 
 			<?php
 			if ( have_posts() ) :
@@ -37,23 +38,19 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/content', get_post_format() );
+					get_template_part( 'template-parts/content-index', get_post_format() );
 
 				endwhile;
-
-				the_posts_navigation();
 
 			else :
 
 				get_template_part( 'template-parts/content', 'none' );
 
 			endif; ?>
-
+				</section><!-- .section -->
+				<?php the_posts_navigation(); ?>
 			</main><!-- #main -->
 		</div><!-- .primary -->
-
-		<?php get_sidebar(); ?>
-
 	</div><!-- .wrap -->
 
 <?php get_footer(); ?>

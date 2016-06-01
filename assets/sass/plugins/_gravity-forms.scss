@@ -93,9 +93,9 @@ $gf-input-padding: $padding-input;
 		-webkit-appearance: none;
 		width: 100%;
 
-		@include media($phone-landscape) {
-			width: 49%;
-		}
+		// @include media($phone-landscape) {
+		// 	width: 49%;
+		// }
 	}
 
 	// Remove icon for default multi-select
@@ -139,7 +139,7 @@ $gf-input-padding: $padding-input;
 	margin-left: 0;
 	width: 100% !important; // overrides GF !important
 
-	@include media($phone-landscape) {
+	@include susy-media($phone-landscape) {
 		width: 49% !important;
 	}
 }
@@ -214,7 +214,7 @@ $gf-input-padding: $padding-input;
 		padding: $gf-input-padding;
 		width: 100%;
 
-		@include media($phone-landscape) {
+		@include susy-media($phone-landscape) {
 			width: 49%;
 		}
 	}
@@ -240,7 +240,7 @@ $gf-input-padding: $padding-input;
 	.gf_right_half {
 		width: 100%;
 
-		@include media($phone-landscape) {
+		@include susy-media($phone-landscape) {
 			width: 49%;
 		}
 
@@ -253,7 +253,7 @@ $gf-input-padding: $padding-input;
 		input[type="password"],
 		input[type="file"] {
 
-			@include media($phone-landscape) {
+			@include susy-media($phone-landscape) {
 				width: 100%;
 			}
 		}
@@ -262,7 +262,7 @@ $gf-input-padding: $padding-input;
 	// Target just left column on two-column row
 	.gf_left_half {
 
-		@include media($phone-landscape) {
+		@include susy-media($phone-landscape) {
 			margin-right: 2%;
 		}
 	}

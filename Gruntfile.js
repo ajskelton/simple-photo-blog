@@ -87,9 +87,11 @@ module.exports = function(grunt) {
 				sourceComments: true,
 				sourceMap: true,
 				includePaths: [
-					'assets/bower_components/bourbon/app/assets/stylesheets',
-					'assets/bower_components/neat/app/assets/stylesheets'
-				]
+					'node_modules/bourbon/app/assets/stylesheets',
+					'node_modules/bourbon-neat/app/assets/stylesheets',
+					'node_modules/susy/susy',
+				],
+				require: 'susy'
 			},
 			dist: {
 				files: {
@@ -297,8 +299,8 @@ module.exports = function(grunt) {
 			default: {
 				src: [
 					'sass/**/*.scss',
-					'assets/bower_components/bourbon/app/assets/stylesheets',
-					'assets/bower_components/neat/app/assets/stylesheets'
+					'node_modules/bourbon/app/assets/stylesheets',
+					'node_modules/bourbon-neat/app/assets/stylesheets'
 				],
 				options: {
 					dest: './sassdoc/',

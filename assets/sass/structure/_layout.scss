@@ -5,43 +5,47 @@
 // Structure
 
 .wrap {
-	@include outer-container;
+	@include container;
 
 	padding: 0 2 * $gutter;
 
-	@include media($desktop) {
+	@include susy-media($mqs-desktop) {
 		padding: 0;
 	}
 }
 
-.site-header,
-.site-footer {
+// .site-header,
+// .site-footer {
 
-	@include media($tablet-landscape) {
-		padding: 0 2 * $gutter;
-	}
-}
+// 	@include media($tablet-landscape) {
+// 		padding: 0 2 * $gutter;
+// 	}
+// }
 
-.site-content {
-	margin: rem(20) auto;
+// .site-content {
+// 	margin: rem(20) auto;
 
-	@include media($desktop) {
-		margin: rem(40) auto rem(60);
-	}
-}
+// 	@include media($desktop) {
+// 		margin: rem(40) auto rem(60);
+// 	}
+// }
 
-.primary {
-	@include fill-parent;
+// .primary {
+// 	@include fill-parent;
 
-	@include media($tablet-landscape) {
-		@include span-columns(8);
-	}
-}
+// 	@include media($tablet-landscape) {
+// 		@include span-columns(8);
+// 	}
+// }
 
-.secondary {
-	@include fill-parent;
+// .secondary {
+// 	@include fill-parent;
 
-	@include media($tablet-landscape) {
-		@include span-columns(4);
-	}
+// 	@include media($tablet-landscape) {
+// 		@include span-columns(4);
+// 	}
+// }
+
+.wrap {
+	@include container;
 }

@@ -35,7 +35,7 @@ a {
 		vertical-align: middle;
 	}
 
-	@include media($phone-landscape) {
+	@include susy-media($phone-landscape) {
 		display: none;
 	}
 }
@@ -52,7 +52,7 @@ a {
 	ul {
 		display: none;
 
-		@include media($phone-landscape) {
+		@include susy-media($phone-landscape) {
 			display: block;
 		}
 	}

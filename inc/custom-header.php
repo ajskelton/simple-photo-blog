@@ -26,12 +26,13 @@ function ajs_spb_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'ajs_spb_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 1480,
+		'height'                 => 500,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'ajs_spb_header_style',
 		'admin-head-callback'    => 'ajs_spb_admin_header_style',
 		'admin-preview-callback' => 'ajs_spb_admin_header_image',
+		'uploads'				 => true,
 	) ) );
 }
 add_action( 'after_setup_theme', 'ajs_spb_custom_header_setup' );

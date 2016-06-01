@@ -22,15 +22,20 @@
 		<div class="entry-meta">
 			<?php ajs_spb_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<div class="image-meta">
-			<?php ajs_spb_get_exif_info(); ?>
-		</div>
+		
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
+		<?php ajs_spb_do_post_image( $size = 'full' ) ?>
+		<?php if ( is_single() ) {
+			?>
+			<div class="image-meta">
+				<?php ajs_spb_get_exif_info(); ?>
+			</div>
+			<?php
+		}
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ajs_spb' ), array( 'span' => array( 'class' => array() ) ) ),

@@ -29,7 +29,7 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: rem(24) 0 0;
+	// margin: rem(24) 0 0;
 }
 
 .page-links {
@@ -47,3 +47,92 @@
 .archive .format-aside .entry-title {
 	display: none;
 }
+
+// .site-main {
+// 	@include outer-container;
+// }
+// .index-grid {
+// 	@include margin(0 0 1rem 0);
+
+// 	@include media($mqs-phone-portrait){
+// 		@include span-columns(1);
+// 	}
+	
+// 	@include media($mqs-phone-landscape){
+// 		@include margin(3em);
+// 		@include span-columns(2);
+// 	}
+
+// 	@include media($mqs-tablet-portrait){
+// 		@include span-columns(3);
+// 	}
+
+// 	@include media($mqs-tablet-landscape){
+// 		@include span-columns(4);
+// 	}
+
+// 	@include media($mqs-desktop){
+// 		@include span-columns(5);
+// 	}
+// }
+
+.gallery {
+	@include container;
+}
+
+.index-grid {
+	@include susy-media($mqs-phone-portrait){
+		@include gallery(12 of 12);
+	}
+
+	@include susy-media($mqs-phone-landscape){
+		@include gallery(6 of 12);
+	}
+
+	@include susy-media($mqs-tablet-portrait){
+		@include gallery(4 of 12);
+	}
+
+	@include susy-media($mqs-tablet-landscape){
+		@include gallery(3 of 12);
+	}
+
+	@include susy-media($mqs-desktop){
+		@include gallery(2.4 of 12);
+	}
+
+	@include susy-media($mqs-large-desktop){
+		@include gallery(2 of 12);
+	}
+
+	@include susy-media($mqs-xl-desktop){
+		@include gallery(2 of 12);
+	}
+	
+}
+
+
+
+
+// .posts-navigation {
+// 	@include span-columns(12);
+// }
+
+// body {
+// 	// background-color: green;
+
+// 	@include media($mqs-phone-portrait) {
+// 		background-color: blue;
+// 	}
+
+// 	@include media($mqs-tablet-portrait) {
+// 		background-color: red;
+// 	}
+
+// 	@include media($mqs-desktop) {
+// 		background-color: white;
+// 	}
+// }
+
+
+

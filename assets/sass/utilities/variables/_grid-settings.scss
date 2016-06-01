@@ -1,34 +1,28 @@
-// --------------------------------------------------------------
-// Grid Settings - overrides default Bourbon Neat
-// http://neat.bourbon.io/examples/
-// --------------------------------------------------------------
+// // --------------------------------------------------------------
+// // Grid Settings - overrides default Bourbon Neat
+// // http://neat.bourbon.io/examples/
+// // --------------------------------------------------------------
 
 $column: em(69);       // default width of your colums
 $gutter: em(12);       // default width of the gutters
 $max-width: em(1480);   // max-width of the grid/theme in pixels
 $total-columns: 12;    // number of columns
 
-// To calculate grids see:
-// http://gridcalculator.dk/#/960/12/12/0
+// Susy Settings
+$susy: (
+  /* Tells Susy to use 12 columns */
+  columns: $total-columns,
+  /* Tells Susy that the container has a max-width of 1120px */
+  container: $max-width,
+  /* Tells Susy to use border-box */
+  global-box-sizing: border-box,
+);
 
-// Set Bourbon's flex-grid variables to match what Neat is doing
-// http://bourbon.io/docs/#flex-grid
-
-$fg-column: $column;
-$fg-gutter: $gutter;
-
-// Optional - A handy visual grid overlay
-$visual-grid: false;        // true/false
-$visual-grid-color: #ffc0cb;   // color of visual grid
-$visual-grid-index: front;  // front/back
-$visual-grid-opacity: 0.2;  // opacity of visual grid
-
-
-// $variable: new-breakpoint( range of values, # of grid columns at the breakpoint )
-$mqs-phone-portrait: new-breakpoint(max-width rem($phone-portrait - 1) 2);
-$mqs-phone-landscape: new-breakpoint(min-width rem($phone-portrait) max-width rem($phone-landscape) 4);
-$mqs-tablet-portrait: new-breakpoint(min-width rem($phone-landscape + 1) max-width rem($tablet-portrait) 4);
-$mqs-tablet-landscape: new-breakpoint(min-width rem($tablet-portrait + 1) max-width rem($tablet-landscape) 8);
-$mqs-desktop: new-breakpoint(min-width rem($tablet-landscape + 1) max-width rem($desktop));
-$mqs-large-desktop: new-breakpoint(min-width rem($desktop + 1) max-width rem($large-desktop - 1));
-$mqs-xl-desktop: new-breakpoint(min-width rem($large-desktop));
+// Setup Breakpoint Slices
+$mqs-phone-portrait: max-width ($phone-portrait - 1);
+$mqs-phone-landscape: $phone-portrait $phone-landscape;
+$mqs-tablet-portrait: ($phone-landscape + 1) $tablet-portrait;
+$mqs-tablet-landscape: ($tablet-portrait + 1) $tablet-landscape;
+$mqs-desktop: ($tablet-landscape + 1) $desktop;
+$mqs-large-desktop: ($desktop + 1) ($large-desktop - 1);
+$mqs-xl-desktop: $large-desktop;
