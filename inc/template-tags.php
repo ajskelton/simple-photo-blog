@@ -343,7 +343,7 @@ function ajs_spb_do_copyright_text() {
 /*
 * Echo the EXIF Info for an image post
 * 
-* @since 1.0
+* @since 1.0.0
  */
 function ajs_spb_get_exif_info() {
 	if ( has_post_format( 'image' )) {
@@ -362,6 +362,20 @@ function ajs_spb_get_exif_info() {
 		<li class="focal-length">Focal Length: <?php echo $post_thumbnail_meta['image_meta']['focal_length']; ?>mm</li>
 	</ul> <!-- .image-exif-list -->
 	<?php } }
+}
+
+/*
+* Echo post navigation using post thumbnails instead of text
+*
+* @since 1.0.0
+ */
+function ajs_spb_thumbnail_navigation() {
+	$next_post = get_next_post();
+    $previous_post = get_previous_post();
+    the_post_navigation( array(
+        'next_text' => get_the_post_thumbnail($next_post->ID,'thumbnail') . '<div class="next-text"><span class="meta-nav" aria-hidden="true">' . __( 'Next: ', 'ajs_spb' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Next post:', 'ajs_spb' ) . '</span> ',
+        'prev_text' => get_the_post_thumbnail($previous_post->ID,'thumbnail') . '<div class="prev-text"><span class="meta-nav" aria-hidden="true">' . __( 'Previous: ', 'ajs_spb' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Previous post:', 'ajs_spb' ) . '</span> ',
+    ) );
 }
 
 /**
