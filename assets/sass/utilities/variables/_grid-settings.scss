@@ -10,11 +10,9 @@ $total-columns: 12;    // number of columns
 
 // Susy Settings
 $susy: (
-  /* Tells Susy to use 12 columns */
   columns: $total-columns,
-  /* Tells Susy that the container has a max-width of 1120px */
+  gutters: 0,
   container: $max-width,
-  /* Tells Susy to use border-box */
   global-box-sizing: border-box,
 );
 
