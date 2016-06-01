@@ -41,41 +41,6 @@
 	margin: 0 rem(24);
 }
 
-// Asides
-
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-	display: none;
-}
-
-// .site-main {
-// 	@include outer-container;
-// }
-// .index-grid {
-// 	@include margin(0 0 1rem 0);
-
-// 	@include media($mqs-phone-portrait){
-// 		@include span-columns(1);
-// 	}
-	
-// 	@include media($mqs-phone-landscape){
-// 		@include margin(3em);
-// 		@include span-columns(2);
-// 	}
-
-// 	@include media($mqs-tablet-portrait){
-// 		@include span-columns(3);
-// 	}
-
-// 	@include media($mqs-tablet-landscape){
-// 		@include span-columns(4);
-// 	}
-
-// 	@include media($mqs-desktop){
-// 		@include span-columns(5);
-// 	}
-// }
-
 .gallery {
 	@include container;
 }
@@ -111,28 +76,9 @@
 	
 }
 
+// Asides
 
-
-
-// .posts-navigation {
-// 	@include span-columns(12);
-// }
-
-// body {
-// 	// background-color: green;
-
-// 	@include media($mqs-phone-portrait) {
-// 		background-color: blue;
-// 	}
-
-// 	@include media($mqs-tablet-portrait) {
-// 		background-color: red;
-// 	}
-
-// 	@include media($mqs-desktop) {
-// 		background-color: white;
-// 	}
-// }
-
-
-
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
