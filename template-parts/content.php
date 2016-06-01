@@ -19,9 +19,6 @@
 			}
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php ajs_spb_posted_on(); ?>
-		</div><!-- .entry-meta -->
 		
 		<?php
 		endif; ?>
@@ -29,11 +26,11 @@
 
 	<div class="entry-content">
 		<?php ajs_spb_do_post_image( $size = 'full' ) ?>
-		
+		<?php ajs_spb_posted_on(); ?>
 			
-			<div class="image-meta">
-				<?php ajs_spb_get_exif_info(); ?>
-			</div>
+		<div class="image-meta">
+			<?php ajs_spb_get_exif_info(); ?>
+		</div>
 			<?php
 		
 			the_content( sprintf(
