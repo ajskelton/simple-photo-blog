@@ -18,7 +18,10 @@ get_header(); ?>
 		<div class="content-area">
 			<main id="main" class="site-main" role="main">
 
-				<?php get_sidebar('index-description'); ?>
+				<section class="description">
+					<?php get_sidebar('index-description'); ?>
+				</section>
+				
 				<h2>Recent Photo Posts</h2>
 				<section class="gallery">
 

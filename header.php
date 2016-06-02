@@ -32,7 +32,16 @@
 		<div class="wrap">
 
 			<div class="site-branding">
+				
+
+
 				<?php if ( is_front_page() && is_home() ) : ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php else : ?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php endif;
+
+				if ( is_front_page() && is_home() ) : ?>
 				<div id="custom-header" class="custom-header">
 					<?php if ( get_header_image() ) : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -40,13 +49,6 @@
 					</a>
 					<?php endif; // End header image check. ?>
 				</div>
-				<?php endif; ?>
-
-
-				<?php if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php endif;
 
 				$description = get_bloginfo( 'description', 'display' );

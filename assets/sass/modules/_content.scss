@@ -40,6 +40,9 @@
 .edit-link {
 	margin: 0 rem(24);
 }
+.description {
+	@include container;
+}
 
 .gallery {
 	@include container;
