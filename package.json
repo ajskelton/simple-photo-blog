@@ -39,6 +39,7 @@
   },
   "license": "GPL-2.0+",
   "devDependencies": {
+    "grunt-browser-sync": "^2.2.0",
     "sass-loader": "^3.2.0",
     "susy": "^2.2.12",
     "webpack": "^1.13.1"

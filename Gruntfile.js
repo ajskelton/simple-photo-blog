@@ -183,6 +183,23 @@ module.exports = function(grunt) {
 			}
 		},
 
+		/*
+		* Browersync
+		*
+		* @link https://www.browsersync.io/docs/grunt/
+		 */
+		browserSync: {
+			dev: {
+				bsFiles: {
+					src: 'style.min.css'
+				},
+				options: {
+					watchTask: true,
+					proxy: 'localhost:8888'
+				}
+			}
+		},
+
 		/**
 		 * Run tasks whenever watched files change.
 		 *
@@ -341,8 +358,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('sprites', ['sprite']);
 	grunt.registerTask('icons', ['svgmin', 'svgstore']);
 	grunt.registerTask('i18n', ['makepot']);
-	grunt.registerTask('default', ['styles', 'javascript', 'sprites', 'imageminnewer', 'icons', 'i18n', 'sassdoc']);
-
+	grunt.registerTask('default', ['styles', 'javascript', 'sprites', 'imageminnewer', 'icons', 'i18n', 'sassdoc', 'browserSync', 'watch']);
+	grunt.registerTask('watching', ['browserSync', 'watch']);
 	// grunt-notify shows native notifications on errors.
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.task.run('notify_hooks');
