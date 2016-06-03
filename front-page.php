@@ -20,7 +20,7 @@ get_header(); ?>
 				<div class="most-recent-post">
 				<?php
 					$args = array( 
-						'numberposts' => '1',
+						'numberposts' => '31',
 						'post_status' => 'publish',
 						'tax_query' => array(
 								array(
@@ -31,9 +31,16 @@ get_header(); ?>
 								),
 						) );
 						$recent_posts = wp_get_recent_posts( $args );
+						$first = true;
+						$index_grid = [];
 						foreach( $recent_posts as $recent ){
-							$featured_image = get_the_post_thumbnail( $recent['ID'], 'full' );
-							echo $featured_image;
+							if($first == true) {
+								$featured_image = get_the_post_thumbnail( $recent['ID'], 'full' );
+								echo $featured_image;
+							} else {
+								array_push($index_grid, get_the_post_thumbnail( $recent['ID'], 'thumbnail' ));
+							}
+							$first = false;
 						}
 				?>
 				</div>
@@ -49,7 +56,19 @@ get_header(); ?>
 					endif;
 
 				endwhile; // End of the loop.
+				
+				// var_dump($index_grid);
 				?>
+				<h2>Recent Photos</h2>
+				<section id="other-recent-posts">
+				<?php
+					foreach( $index_grid as $grid_item){
+						echo '<div class="index-grid">';
+						echo $grid_item;
+						echo '</div>';
+					}
+				?>
+				</section>
 
 			</main><!-- #main -->
 		</div><!-- .primary -->
