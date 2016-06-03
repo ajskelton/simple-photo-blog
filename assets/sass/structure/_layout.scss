@@ -8,10 +8,6 @@
 	@include container;
 
 	padding: 0 2 * $gutter;
-
-	@include susy-media($mqs-desktop) {
-		padding: 0;
-	}
 }
 
 .site-content {
