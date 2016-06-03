@@ -814,17 +814,17 @@ body.ready .not-ready {
 
 /* line 6, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_navigation.scss */
 a {
-  color: #21759b;
+  color: #000000;
 }
 
 /* line 9, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_navigation.scss */
 a:visited {
-  color: #21759b;
+  color: #000000;
 }
 
 /* line 13, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_navigation.scss */
 a:hover, a:focus, a:active {
-  color: #21759b;
+  color: #000000;
 }
 
 /* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_navigation.scss */
