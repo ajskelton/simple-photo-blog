@@ -10,6 +10,14 @@
 	padding: 0 2 * $gutter;
 }
 
+.blog-wrap {
+	max-width: rem(1280);
+	margin-left: auto;
+	margin-right: auto;
+
+	padding: 0 2 * $gutter;
+}
+
 .site-content {
 	margin: rem(20) auto;
 
