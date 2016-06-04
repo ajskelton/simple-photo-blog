@@ -12,7 +12,7 @@
 <article <?php post_class(); ?>>
 	<div class="entry-content">
 		<a href="<?php echo the_permalink(); ?>">
-		<?php ajs_spb_do_post_image( $size = 'blog-features' ) ?>
+		<?php ajs_spb_do_post_image( $size = 'full' ) ?>
 		</a> <!-- .featured-image -->
 		<?php
 			if ( is_single() ) {
