@@ -14,16 +14,10 @@
 
 get_header(); ?>
 
-	<div class="wrap">
+	<div class="blog-wrap">
 		<div class="content-area">
 			<main id="main" class="site-main" role="main">
 
-				<section class="description">
-					<?php get_sidebar('index-description'); ?>
-				</section>
-				
-				<h2>Recent Photo Posts</h2>
-				<section class="gallery">
 
 			<?php
 			if ( have_posts() ) :
@@ -38,7 +32,7 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/content-index', get_post_format() );
+					get_template_part( 'template-parts/content', get_post_format() );
 
 				endwhile;
 
