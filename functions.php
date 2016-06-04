@@ -74,7 +74,7 @@ function ajs_spb_setup() {
 	add_editor_style( array( 'editor-style.css', ajs_spb_font_url() ) );
 
 	// Add Custom Images Sizes
-	// add_image_size( 'index-grid', 400, 400, array( 'center', 'center' ) );
+	add_image_size( 'blog-features', 1280, 9999 );
 
 }
 endif; // ajs_spb_setup
