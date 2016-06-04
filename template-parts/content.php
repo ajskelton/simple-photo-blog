@@ -10,43 +10,42 @@
 ?>
 
 <article <?php post_class(); ?>>
-	<header class="entry-header">
+	<div class="entry-content">
+		<a href="<?php echo the_permalink(); ?>">
+		<?php ajs_spb_do_post_image( $size = 'blog-features' ) ?>
+		</a> <!-- .featured-image -->
 		<?php
 			if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			} else {
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
-
 		if ( 'post' === get_post_type() ) : ?>
-		
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php ajs_spb_do_post_image( $size = 'full' ) ?>
-		<?php ajs_spb_posted_on(); ?>
-			
-		<div class="image-meta">
-			<?php ajs_spb_get_exif_info(); ?>
-		</div>
-			<?php
 		
+		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ajs_spb' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', '_s' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
-
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ajs_spb' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
 				'after'  => '</div>',
 			) );
 		?>
+		<?php ajs_spb_posted_on(); ?>
+		<?php if( is_single() ) : ?>
+			<div class="image-meta">
+				<?php ajs_spb_get_exif_info(); ?>
+			</div>
+		<?php endif; ?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php ajs_spb_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	<hr>
 </article><!-- #post-## -->
