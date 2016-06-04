@@ -36,7 +36,12 @@ get_header(); ?>
 						foreach( $recent_posts as $recent ){
 							if($first == true) {
 								$featured_image = get_the_post_thumbnail( $recent['ID'], 'full' );
+								echo '<a href="'.$recent['guid'].'">';
 								echo $featured_image;
+								echo '</a>';
+								echo '<h2>'.$recent['post_title'].'</h2>';
+								echo '<p class="image-description">'.$recent['post_excerpt'].'</p>';
+								echo '<hr>';
 							} else {
 								array_push($index_grid, get_the_post_thumbnail( $recent['ID'], 'thumbnail' ));
 							}
