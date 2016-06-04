@@ -43,7 +43,7 @@ get_header(); ?>
 								echo '<p class="image-description">'.$recent['post_excerpt'].'</p>';
 								echo '<hr>';
 							} else {
-								array_push($index_grid, get_the_post_thumbnail( $recent['ID'], 'thumbnail' ));
+								array_push($index_grid, array(get_the_post_thumbnail( $recent['ID'], 'thumbnail' ), $recent['guid'] ) );
 							}
 							$first = false;
 						}
@@ -69,7 +69,9 @@ get_header(); ?>
 				<?php
 					foreach( $index_grid as $grid_item){
 						echo '<div class="index-grid">';
-						echo $grid_item;
+						echo '<a href="'.$grid_item[1].'">';
+						echo $grid_item[0];
+						echo '</a>';
 						echo '</div>';
 					}
 				?>
