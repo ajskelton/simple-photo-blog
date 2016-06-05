@@ -23,19 +23,11 @@
 }
 
 .entry-description {
-	max-width: 80%;
+	max-width: 100%;
 	margin: 0 auto;
 
 	@include susy-media($tablet-portrait) {
-		max-width: 70%;
-	}
-
-	@include susy-media($tablet-landscape) {
-		max-width: 60%;
-	}
-
-	@include susy-media($desktop) {
-		max-width: 50%;
+		max-width: rem(640);
 	}
 }
 
