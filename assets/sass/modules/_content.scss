@@ -5,7 +5,38 @@
 // Posts and pages
 
 .entry-title {
-	font-size: rem(36);
+	font-size: rem(24);
+	margin: 0 0 .5em 0;
+	text-align: center;
+	font-weight: 200;
+	letter-spacing: rem(5);
+
+	a {
+		text-decoration: none;
+		border-bottom: 1px solid black;
+		padding: 0 1em;
+	}
+
+	@include susy-media($tablet-landscape) {
+		font-size: rem(36);
+	}
+}
+
+.entry-description {
+	max-width: 80%;
+	margin: 0 auto;
+
+	@include susy-media($tablet-portrait) {
+		max-width: 70%;
+	}
+
+	@include susy-media($tablet-landscape) {
+		max-width: 60%;
+	}
+
+	@include susy-media($desktop) {
+		max-width: 50%;
+	}
 }
 
 .sticky {
