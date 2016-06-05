@@ -12,7 +12,11 @@
 <article <?php post_class(); ?>>
 	<div class="entry-content">
 		<a href="<?php echo the_permalink(); ?>">
-		<?php ajs_spb_do_post_image( $size = 'blog-features' ) ?>
+		<?php 
+		if(has_post_thumbnail()){
+			ajs_spb_do_post_image( $size = 'blog-features' );
+		}
+		?>
 		</a> <!-- .featured-image -->
 		<?php
 			if ( is_single() ) {
@@ -23,7 +27,7 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<?php
 		endif; ?>
-		
+		<div class="entry-description">
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
@@ -35,12 +39,14 @@
 				'after'  => '</div>',
 			) );
 		?>
+		</div> <!-- .entry-description -->
 		<?php ajs_spb_posted_on(); ?>
 		<?php if( is_single() ) : ?>
 			<div class="image-meta">
 				<?php ajs_spb_get_exif_info(); ?>
 			</div>
 		<?php endif; ?>
+		<div class="test"></div>
 
 	</div><!-- .entry-content -->
 
