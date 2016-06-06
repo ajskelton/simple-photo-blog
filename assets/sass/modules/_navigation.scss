@@ -215,5 +215,9 @@ a {
 
 		float: right;
 		text-align: right;
+
+		& img {
+			margin-left: auto;
+		}
 	}
 }

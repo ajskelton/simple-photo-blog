@@ -1013,6 +1013,13 @@ a:hover, a:focus, a:active {
   text-align: right;
 }
 
+/* line 219, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_navigation.scss */
+.comment-navigation .nav-next img,
+.posts-navigation .nav-next img,
+.post-navigation .nav-next img {
+  margin-left: auto;
+}
+
 /* line 7, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .entry-title {
   font-size: 1.5rem;
