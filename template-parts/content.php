@@ -21,6 +21,8 @@
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
 		if ( 'post' === get_post_type() ) : ?>
+		<div class="entry-description">
+		<?php ajs_spb_posted_on(); ?>
 		<?php
 		endif; ?>
 		
@@ -35,12 +37,13 @@
 				'after'  => '</div>',
 			) );
 		?>
-		<?php ajs_spb_posted_on(); ?>
+		
 		<?php if( is_single() ) : ?>
 			<div class="image-meta">
 				<?php ajs_spb_get_exif_info(); ?>
 			</div>
 		<?php endif; ?>
+		</div><!-- .entry-description -->
 
 	</div><!-- .entry-content -->
 
