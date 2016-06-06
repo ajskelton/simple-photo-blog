@@ -25,9 +25,11 @@
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
 		if ( 'post' === get_post_type() ) : ?>
+		<div class="entry-description">
+		<?php ajs_spb_posted_on(); ?>
 		<?php
 		endif; ?>
-		<div class="entry-description">
+		
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
@@ -40,7 +42,7 @@
 			) );
 		?>
 		</div> <!-- .entry-description -->
-		<?php ajs_spb_posted_on(); ?>
+		
 		<?php if( is_single() ) : ?>
 			<div class="image-meta">
 				<?php ajs_spb_get_exif_info(); ?>
