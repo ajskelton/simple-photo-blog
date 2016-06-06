@@ -39,8 +39,8 @@ get_header(); ?>
 								echo '<a href="'.$recent['guid'].'">';
 								echo $featured_image;
 								echo '</a>';
-								echo '<h2>'.$recent['post_title'].'</h2>';
-								echo '<p class="image-description">'.$recent['post_excerpt'].'</p>';
+								echo '<h2 class="entry-title">'.$recent['post_title'].'</h2>';
+								echo '<p class="entry-description">'.$recent['post_excerpt'].'</p>';
 								echo '<hr>';
 							} else {
 								array_push($index_grid, array(get_the_post_thumbnail( $recent['ID'], 'thumbnail' ), $recent['guid'] ) );
