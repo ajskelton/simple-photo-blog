@@ -109,6 +109,12 @@
 	@include span(4 of 12);
 }
 
+// Meta Information
+.posted-on-meta {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
 // Asides
 
 .blog .format-aside .entry-title,

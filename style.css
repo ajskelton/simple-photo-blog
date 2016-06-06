@@ -1103,7 +1103,13 @@ a:hover, a:focus, a:active {
   float: left;
 }
 
-/* line 114, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 113, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+.posted-on-meta {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* line 120, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none;
