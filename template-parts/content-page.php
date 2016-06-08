@@ -10,14 +10,13 @@
 ?>
 
 <article <?php post_class(); ?>>
-	<?php if (!is_front_page()) :
-
-	?>
+	
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-	<?php endif; ?>
-
+	<?php if( ! is_front_page() && has_post_thumbnail() ) {
+		ajs_spb_do_post_image( $size = 'full' );
+	} ?>
 
 	<div class="entry-content">
 		<?php
