@@ -373,9 +373,17 @@ function ajs_spb_get_exif_info() {
 function ajs_spb_thumbnail_navigation() {
 	$next_post = get_next_post();
     $previous_post = get_previous_post();
+    $thumbnails = [];
+    $thumbnails['next'] = get_the_post_thumbnail($next_post->ID,'thumbnail');
+    $thumbnails['prev'] = get_the_post_thumbnail($previous_post->ID,'thumbnail');
+    foreach($thumbnails as $key => $value) {
+    	if(!$value) {
+    		$thumbnails[$key] = '<img width="400" height="400" src="' . get_stylesheet_directory_uri() . '/assets/images/placeholder.png" class="attachment-thumbnail wp-post-image" />';
+    	}
+    }
     the_post_navigation( array(
-        'next_text' => get_the_post_thumbnail($next_post->ID,'thumbnail') . '<div class="next-text"><span class="meta-nav" aria-hidden="true">' . __( 'Next: ', 'ajs_spb' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Next post:', 'ajs_spb' ) . '</span> ',
-        'prev_text' => get_the_post_thumbnail($previous_post->ID,'thumbnail') . '<div class="prev-text"><span class="meta-nav" aria-hidden="true">' . __( 'Previous: ', 'ajs_spb' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Previous post:', 'ajs_spb' ) . '</span> ',
+        'next_text' => $thumbnails['next'] . '<div class="next-text"><span class="meta-nav" aria-hidden="true">' . __( 'Next: ', 'ajs_spb' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Next post:', 'ajs_spb' ) . '</span> ',
+        'prev_text' => $thumbnails['prev'] . '<div class="prev-text"><span class="meta-nav" aria-hidden="true">' . __( 'Previous: ', 'ajs_spb' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Previous post:', 'ajs_spb' ) . '</span> ',
     ) );
 }
 
