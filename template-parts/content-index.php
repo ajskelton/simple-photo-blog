@@ -10,14 +10,15 @@
 ?>
 
 <article <?php post_class(); ?>>
+	<a href="<?php echo the_permalink(); ?>">
+		<?php 
+		if(has_post_thumbnail()){
+			ajs_spb_do_post_image( $size = 'blog-features' );
+		}
+		?>
+	</a> <!-- .featured-image -->
 	<div class="entry-content">
-		<a href="<?php echo the_permalink(); ?>">
-			<?php 
-			if(has_post_thumbnail()){
-				ajs_spb_do_post_image( $size = 'blog-features' );
-			}
-			?>
-		</a> <!-- .featured-image -->
+		
 		<?php
 			if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
