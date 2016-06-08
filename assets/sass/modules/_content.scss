@@ -19,6 +19,7 @@
 
 	@include susy-media($tablet-landscape) {
 		font-size: rem(36);
+		margin-bottom: 1em;
 	}
 }
 
@@ -55,9 +56,9 @@
 	display: inline;
 }
 
-.page-content > p,
-.entry-content > p,
-.entry-summary > p{
+.page-content,
+.entry-content,
+.entry-summary{
 	max-width: rem(640);
 	margin: 0 auto 1.5em auto;
 }
