@@ -25,10 +25,15 @@
 .entry-description,
 .entry-footer {
 	max-width: 100%;
-	margin: 0 auto;
+	margin: 0 auto $gutter auto;
 
 	@include susy-media($tablet-portrait) {
 		max-width: rem(640);
+		margin-bottom: $gutter * 2;
+	}
+
+	& > * {
+		display: block;
 	}
 }
 
@@ -36,9 +41,9 @@
 	display: block;
 }
 
-// .hentry {
-// 	margin: 0 0 rem(24) 0;
-// }
+.most-recent-post {
+	margin-bottom: $gutter * 2;
+}
 
 .byline,
 .updated:not(.published) {
@@ -50,10 +55,11 @@
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	// margin: rem(24) 0 0;
+.page-content > p,
+.entry-content > p,
+.entry-summary > p{
+	max-width: rem(640);
+	margin: 0 auto 1.5em auto;
 }
 
 .page-links {
@@ -62,7 +68,7 @@
 }
 
 .edit-link {
-	margin: 0 rem(24);
+	text-align: center;
 }
 .description {
 	@include container;
