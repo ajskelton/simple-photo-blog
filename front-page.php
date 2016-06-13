@@ -39,7 +39,8 @@ get_header(); ?>
 								echo '<a href="'.$recent['guid'].'">';
 								echo $featured_image;
 								echo '</a>';
-								echo '<h2 class="entry-title">'.$recent['post_title'].'</h2>';
+								echo '<h2 class="entry-title"><a href="'.$recent['guid'].'">'.$recent['post_title'].'</a></h2>';
+								ajs_spb_posted_on();
 								echo '<p class="entry-description">'.$recent['post_excerpt'].'</p>';
 								echo '<hr>';
 							} else {
