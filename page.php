@@ -19,10 +19,45 @@ get_header(); ?>
 			<main id="main" class="site-main" role="main">
 
 				<?php
-				while ( have_posts() ) : the_post();
+				while ( have_posts() ) : the_post(); ?>
+					
+					<article <?php post_class(); ?>>
+	
+					<header class="entry-header">
+						<?php if( !is_front_page()) : ?>
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						<?php endif; ?>
+					</header><!-- .entry-header -->
+					<?php if( ! is_front_page() && has_post_thumbnail() ) {
+						ajs_spb_do_post_image( $size = 'full' );
+					} ?>
 
-					get_template_part( 'template-parts/content', 'page' );
+					<div class="entry-content">
+						<?php
+							the_content();
 
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ajs_spb' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div><!-- .entry-content -->
+
+					<footer class="entry-footer">
+						<?php
+							edit_post_link(
+								sprintf(
+									/* translators: %s: Name of current post */
+									esc_html__( 'Edit %s', 'ajs_spb' ),
+									the_title( '<span class="screen-reader-text">"', '"</span>', false )
+								),
+								'<span class="edit-link">',
+								'</span>'
+							);
+						?>
+					</footer><!-- .entry-footer -->
+				</article><!-- #post-## -->
+				<?php
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :
 						comments_template();
@@ -33,9 +68,6 @@ get_header(); ?>
 
 			</main><!-- #main -->
 		</div><!-- .primary -->
-
-		<?php get_sidebar(); ?>
-
 	</div><!-- .wrap -->
 
 <?php get_footer(); ?>
