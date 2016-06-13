@@ -44,6 +44,14 @@
 
 .most-recent-post {
 	margin-bottom: $gutter * 2;
+
+	h2 {
+		margin-bottom: $gutter / 2;
+	}
+}
+
+.wp-post-image {
+	margin-bottom: $gutter * 2;
 }
 
 .byline,

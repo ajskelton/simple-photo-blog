@@ -1059,19 +1059,29 @@ a:hover, a:focus, a:active {
   margin-bottom: 1.5em;
 }
 
-/* line 49, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 48, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+.most-recent-post h2 {
+  margin-bottom: 0.375em;
+}
+
+/* line 53, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+.wp-post-image {
+  margin-bottom: 1.5em;
+}
+
+/* line 57, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .byline,
 .updated:not(.published) {
   display: none;
 }
 
-/* line 54, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 62, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .single .byline,
 .group-blog .byline {
   display: inline;
 }
 
-/* line 59, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 67, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1079,18 +1089,18 @@ a:hover, a:focus, a:active {
   margin: 0 auto 1.5em auto;
 }
 
-/* line 66, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 74, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5rem 0;
 }
 
-/* line 71, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 79, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .edit-link {
   text-align: center;
 }
 
-/* line 74, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 82, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .description {
   max-width: 92.5em;
   margin-left: auto;
@@ -1104,7 +1114,7 @@ a:hover, a:focus, a:active {
   clear: both;
 }
 
-/* line 78, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 86, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .gallery {
   max-width: 92.5em;
   margin-left: auto;
@@ -1118,32 +1128,32 @@ a:hover, a:focus, a:active {
   clear: both;
 }
 
-/* line 113, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 121, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .index-description {
   width: 66.6666666667%;
   float: left;
 }
 
-/* line 116, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 124, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .index-image {
   width: 33.3333333333%;
   float: left;
 }
 
-/* line 121, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 129, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .posted-on-meta {
   text-align: center;
   margin-bottom: 1em;
 }
 
-/* line 126, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 134, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .image-exif-list {
   list-style: none;
   padding: 0;
   margin-left: 0;
 }
 
-/* line 134, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+/* line 142, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none;
@@ -1686,7 +1696,7 @@ textarea {
   display: none;
 }
 
-@media (min-width: 360px) and (max-width: 640px) {/* line 82, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+@media (min-width: 360px) and (max-width: 640px) {/* line 90, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
   .index-grid {
     width: 50%;
     float: left;
@@ -1759,7 +1769,7 @@ textarea {
   }
 }
 
-@media (min-width: 641px) and (max-width: 768px) {/* line 82, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+@media (min-width: 641px) and (max-width: 768px) {/* line 90, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
   .index-grid {
     width: 33.3333333333%;
     float: left;
@@ -1790,7 +1800,7 @@ textarea {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {/* line 82, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+@media (min-width: 769px) and (max-width: 1024px) {/* line 90, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
   .index-grid {
     width: 25%;
     float: left;
@@ -1839,7 +1849,7 @@ textarea {
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1366px) {/* line 82, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+@media (min-width: 1025px) and (max-width: 1366px) {/* line 90, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
   .index-grid {
     width: 20%;
     float: left;
@@ -1878,7 +1888,7 @@ textarea {
   }
 }
 
-@media (min-width: 1367px) and (max-width: 1679px) {/* line 82, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+@media (min-width: 1367px) and (max-width: 1679px) {/* line 90, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
   .index-grid {
     width: 16.6666666667%;
     float: left;
@@ -1916,7 +1926,7 @@ textarea {
   }
 }
 
-@media (min-width: 1680px) {/* line 82, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+@media (min-width: 1680px) {/* line 90, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
   .index-grid {
     width: 16.6666666667%;
     float: left;
@@ -1954,7 +1964,7 @@ textarea {
   }
 }
 
-@media (max-width: 359px) {/* line 82, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
+@media (max-width: 359px) {/* line 90, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_content.scss */
   .index-grid {
     width: 100%;
     float: left;
