@@ -95,6 +95,10 @@
 }
 
 .index-grid {
+	& .wp-post-image {
+		margin:0;
+	}
+
 	@include susy-media($mqs-phone-portrait){
 		@include gallery(12 of 12);
 	}
