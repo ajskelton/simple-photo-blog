@@ -24,7 +24,9 @@
 }
 
 .entry-description,
-.entry-footer {
+.entry-footer,
+.post-navigation,
+.comments-area {
 	max-width: 100%;
 	margin: 0 auto $gutter auto;
 
@@ -52,6 +54,8 @@
 
 .wp-post-image {
 	margin-bottom: $gutter * 2;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .byline,

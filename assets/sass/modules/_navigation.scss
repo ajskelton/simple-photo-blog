@@ -198,11 +198,7 @@ a {
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
-	.site-main & {
-		margin: 0 0 rem(24) 0;
-		overflow: hidden;
-	}
+	@include clearfix;
 
 	& .nav-previous {
 		@include size(50% auto);
