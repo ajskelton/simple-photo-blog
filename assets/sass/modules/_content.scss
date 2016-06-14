@@ -14,7 +14,10 @@
 	a {
 		text-decoration: none;
 		border-bottom: 1px solid black;
-		padding: 0 1em;
+
+		@include susy-media($tablet-portrait) {
+			padding: 0 1em;
+		}
 	}
 
 	@include susy-media($tablet-landscape) {
