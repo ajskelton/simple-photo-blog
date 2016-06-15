@@ -41,12 +41,17 @@ get_header(); ?>
 									'after'  => '</div>',
 								) );
 							?>
-						
-							<div class="image-meta">
-								<hr>
-								<h3>EXIF Information</h3>
-								<?php ajs_spb_get_exif_info(); ?>
-							</div>
+							<?php
+								if( has_post_format( 'image', get_the_id() ) ){
+							?>
+								<div class="image-meta">
+									<hr>
+									<h3>EXIF Information</h3>
+									<?php ajs_spb_get_exif_info(); ?>
+								</div><!-- .image-meta -->
+							<?php
+								} // End if has_post_format
+							?>
 						</div><!-- .entry-description -->
 
 					</div><!-- .entry-content -->
@@ -55,7 +60,7 @@ get_header(); ?>
 						<hr>
 						<?php ajs_spb_entry_footer(); ?>
 					</footer><!-- .entry-footer -->
-					<hr>
+					
 				</article><!-- #post-## -->
 				<?php
 
@@ -72,9 +77,6 @@ get_header(); ?>
 
 			</main><!-- #main -->
 		</div><!-- .primary -->
-
-		
-
 	</div><!-- .wrap -->
 
 <?php get_footer(); ?>
