@@ -42,6 +42,10 @@
 	}
 }
 
+.front-page-content {
+	@include clearfix;
+}
+
 .sticky {
 	display: block;
 }
