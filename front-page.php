@@ -39,9 +39,11 @@ get_header(); ?>
 								echo '<a href="'.$recent['guid'].'">';
 								echo $featured_image;
 								echo '</a>';
+								echo '<div class="entry-content">';
 								echo '<h2 class="entry-title"><a href="'.$recent['guid'].'">'.$recent['post_title'].'</a></h2>';
 								ajs_spb_posted_on();
 								echo '<p class="entry-description">'.$recent['post_excerpt'].'</p>';
+								echo '</div> <!-- .entry-content -->';
 								echo '<hr>';
 							} else {
 								array_push($index_grid, array(get_the_post_thumbnail( $recent['ID'], 'thumbnail' ), $recent['guid'] ) );
@@ -54,16 +56,25 @@ get_header(); ?>
 				<?php
 				while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/content', 'page' );
+					if( ! is_front_page() && has_post_thumbnail() ) {
+						ajs_spb_do_post_image( $size = 'full' );
+					} ?>
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+					<div class="front-page-content">
+						<?php
+							the_content();
+
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ajs_spb' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div><!-- .front-page-content -->
+
+				<?php
 
 				endwhile; // End of the loop.
 				
-				// var_dump($index_grid);
 				?>
 				<h2>Recent Photos</h2>
 				<section id="other-recent-posts">
@@ -76,7 +87,7 @@ get_header(); ?>
 						echo '</div>';
 					}
 				?>
-				</section>
+				</section><!-- #other-recent-posts -->
 
 			</main><!-- #main -->
 		</div><!-- .primary -->
