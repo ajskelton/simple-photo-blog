@@ -43,6 +43,8 @@ get_header(); ?>
 							?>
 						
 							<div class="image-meta">
+								<hr>
+								<h3>EXIF Information</h3>
 								<?php ajs_spb_get_exif_info(); ?>
 							</div>
 						</div><!-- .entry-description -->
@@ -50,6 +52,7 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 
 					<footer class="entry-footer">
+						<hr>
 						<?php ajs_spb_entry_footer(); ?>
 					</footer><!-- .entry-footer -->
 					<hr>
