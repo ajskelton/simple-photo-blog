@@ -27,6 +27,10 @@ figure {
 ul,
 ol {
 	margin: 0 0 rem(48) rem(24);
+
+	&.image-exif-list {
+		margin-bottom: 0;	
+	}
 }
 
 ul {

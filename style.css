@@ -538,40 +538,46 @@ ol {
   margin: 0 0 3rem 1.5rem;
 }
 
-/* line 32, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
+/* line 31, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
+ul.image-exif-list,
+ol.image-exif-list {
+  margin-bottom: 0;
+}
+
+/* line 36, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
 ul {
   list-style: disc;
 }
 
-/* line 36, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
+/* line 40, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 40, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
+/* line 44, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
 li > ul,
 li > ol {
   margin: 0 0 0 1.5rem;
 }
 
-/* line 45, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
+/* line 49, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
 dt {
   font-weight: 700;
 }
 
-/* line 49, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
+/* line 53, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
 dd {
   margin: 0 1.5rem 1.5rem 0;
 }
 
-/* line 55, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
+/* line 59, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
 table {
   height: auto;
   width: 100%;
   margin: 0 0 1.5rem 0;
 }
 
-/* line 61, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
+/* line 65, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_elements.scss */
 th {
   font-weight: 700;
 }
