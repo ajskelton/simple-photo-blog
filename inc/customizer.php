@@ -79,6 +79,7 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_credits_enable',
         array(
             'capability' => 'edit_theme_options',
+            'default'    => '1',
         )
     );
     $wp_customize->add_control(
