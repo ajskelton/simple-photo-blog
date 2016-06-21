@@ -3,11 +3,17 @@
 //--------------------------------------------------------------
 
 .site-footer {
-	border-top: 3px solid black;
+	background: #666;
+	color: white;
+	padding-top: $gutter * 2;
+
+	a {
+		color: $footer-color-link;
+	}
 }
 
 .credits,
 .site-info {
 	text-align: center;
-	margin: ($gutter * 2) 0;
+	margin-bottom: $gutter * 2;
 }
