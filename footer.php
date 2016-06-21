@@ -19,12 +19,14 @@
 			<div class="site-info">
 				<?php ajs_spb_do_copyright_text(); ?>
 			</div>
+			<?php if( get_theme_mod( 'ajs_spb_credits_enable' ) ) { ?>
 			<div class="credits">
 				<span>Proudly powered by </span>
 				<a href="http://www.wordpress.org">WordPress</a>
 				<span> / Theme: </span>
 				<a href="http://anthonyskelton.com/simplephotoblog">Simple Photo Blog</a> by <a href="http://anthonyskelton.com">Anthony Skelton</a>
 			</div>
+			<?php } ?>
 
 		</div><!-- .wrap -->
 	</footer><!-- .site-footer -->
