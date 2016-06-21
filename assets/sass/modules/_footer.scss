@@ -1,3 +1,13 @@
 //--------------------------------------------------------------
 // Footer
 //--------------------------------------------------------------
+
+.site-footer {
+	border-top: 3px solid black;
+}
+
+.credits,
+.site-info {
+	text-align: center;
+	margin: ($gutter * 2) 0;
+}
