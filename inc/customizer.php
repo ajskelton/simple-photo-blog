@@ -91,6 +91,96 @@ function ajs_spb_customize_register( $wp_customize ) {
             'settings'    => 'ajs_spb_default_featured_image',
         )
     ) );
+    /*
+    * Front Page Section
+    *
+    * @since 1.0.0
+     */
+    $wp_customize->add_section(
+        'ajs_spb_front_page_section',
+        array(
+            'title'           => __('Front Page Settings', 'ajs_spb' ),
+            'priority'        => 30,
+            'description'     => __( 'Front Page settings and options', 'ajs_spb' ),
+            'active_callback' => 'is_front_page',
+        )
+    );
+    /*
+    * Enable Most Recent Post on Front Page
+    *
+    * @since 1.0.0
+     */
+    $wp_customize->add_setting(
+        'ajs_spb_most_recent_post',
+        array(
+            'capability'  => 'edit_theme_options',
+        )
+    );
+    $wp_customize->add_control(
+        'ajs_spb_most_recent_post',
+        array(
+            'label'       => esc_html__( 'Enable Most Recent Post', 'ajs_spb' ),
+            'description' => esc_html__( 'Enabling will show the most recent photo post at the top of the front page.', 'ajs_spb' ),
+            'section'     => 'ajs_spb_front_page_section',
+            'settings'    => 'ajs_spb_most_recent_post',
+            'type'        => 'checkbox',
+        )
+    );
+    /*
+    * Index Grid Settings on Front Page
+    *
+    * @since 1.0.0
+     */
+    $wp_customize->add_setting(
+        'ajs_spb_index_grid_enable',
+        array(
+            'capability'  => 'edit_theme_options',
+        )
+    );
+    $wp_customize->add_control(
+        'ajs_spb_index_grid_enable',
+        array(
+            'label'       => esc_html__( 'Enable Index Grid', 'ajs_spb' ),
+            'description' => esc_html__( 'Enabling will show a grid of recent image posts on the bottom of the front page.', 'ajs_spb'),
+            'section'     => 'ajs_spb_front_page_section',
+            'settings'    => 'ajs_spb_index_grid_enable',
+            'type'        => 'checkbox',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'ajs_spb_index_grid_title',
+        array(
+            'default'     => '',
+        )
+    );
+    $wp_customize->add_control(
+        'ajs_spb_index_grid_title',
+        array(
+            'label'       => esc_html__( 'Index Grid Title', 'ajs_spb' ),
+            'description' => esc_html__( 'The title will show above the index grid on the front page when enabled.', 'ajs_spb' ),
+            'section'     => 'ajs_spb_front_page_section',
+            'type'        => 'text',
+            'sanitize'    => 'html'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'ajs_spb_index_grid_amount',
+        array(
+            'default'     => 30,
+        )
+    );
+    $wp_customize->add_control(
+        'ajs_spb_index_grid_amount',
+        array(
+            'label'       => esc_html__( 'Index Grid Amount', 'ajs_spb' ),
+            'description' => esc_html__( 'Number of images to show in the Index Grid', 'ajs_spb' ),
+            'section'     => 'ajs_spb_front_page_section',
+            'type'        => 'number',
+        )
+    );
+
 
 }
 add_action( 'customize_register', 'ajs_spb_customize_register' );
