@@ -74,6 +74,23 @@ function ajs_spb_customize_register( $wp_customize ) {
             'sanitize'    => 'html'
         )
     );
+    // Add footer credits option
+    $wp_customize->add_setting(
+        'ajs_spb_credits_enable',
+        array(
+            'capability' => 'edit_theme_options',
+        )
+    );
+    $wp_customize->add_control(
+        'ajs_spb_credits_enable',
+        array(
+            'label'       => esc_html__( 'Enable Credits', 'ajs_spb' ),
+            'description' => esc_html__( 'Check to enable credits to WordPress and theme in the footer', 'ajs_spb' ),
+            'section'     => 'ajs_spb_footer_section',
+            'type'        => 'checkbox',
+        )
+    );
+
     $wp_customize->add_section(
         'ajs_spb_default_featured_image_section',
         array(
