@@ -21,6 +21,7 @@ a {
 .menu-toggle {
 	display: inherit;
 	margin-left: auto;
+	margin-right: auto;
 	background-color: transparent;
 	color: $color-black;
 	margin-top: rem(-36);
@@ -35,7 +36,7 @@ a {
 		@include size(rem(12) rem(14));
 
 		display: inline-block;
-		fill: $color-black;
+		fill: $color-white;
 		margin-right: rem(5);
 		vertical-align: middle;
 	}
@@ -43,7 +44,8 @@ a {
 	.menu-toggle-text {
 		display: inline-block;
 		vertical-align: middle;
-		background-color: $color-white;
+		background-color: transparent;
+		color: $color-white;
 	}
 
 	@include susy-media($phone-landscape) {
@@ -87,7 +89,7 @@ a {
 		li {
 			margin: 0;
 			display: block;
-			text-align: right;
+			text-align: center;
 			float: none;
 		}
 	}
@@ -184,6 +186,7 @@ a {
 
 	// Menu hyperlinks
 	a {
+		color: $header-color-link;
 		display: block;
 		text-decoration: none;
 	}

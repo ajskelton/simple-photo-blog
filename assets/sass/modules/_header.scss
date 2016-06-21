@@ -4,24 +4,38 @@
 
 .site-title {
 	font-size: rem(24);
-	margin: 0;	
+	margin: 0;
+	color: white;
+	text-align: center;
 
 	a {
 		text-decoration: none;
+		color: white;
 	}
 
 	@include susy-media($phone-landscape){
 		font-size: rem(36);
 	}
+
+	@include susy-media($tablet-landscape) {
+		text-align: left;
+	}
 }
 
 .site-header {
-	border-bottom: 3px solid black;
+	background: #666;
+	color: white;
 }
 
 .site-description {
-	font-size: rem(24);
-	margin: 0 0 rem(24) 0;
+	font-size: rem(18);
+	font-weight: 200;
+	margin: 0 0 rem(32) 0;
+	text-align: center;
+
+	@include susy-media($tablet-landscape) {
+		text-align: left;
+	}
 }
 
 .site-branding {
