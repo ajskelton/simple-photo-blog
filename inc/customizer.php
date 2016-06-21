@@ -79,7 +79,7 @@ function ajs_spb_customize_register( $wp_customize ) {
         array(
             'title'       => __( 'Default Featured Image', 'ajs_spb' ),
             'priority'    => 30,
-            'description' => 'Upload an image to use for any posts without a featured image',
+            'description' => 'Upload an image to use for any posts without a featured image. The image is only used in post navigation and no image is shown on the post if no featured image is chosen. A square image of at least 400x400 is optimal. If no image is uploaded a default gray square is used.',
         )
     );
     $wp_customize->add_setting(
