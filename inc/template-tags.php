@@ -383,7 +383,11 @@ function ajs_spb_thumbnail_navigation() {
     $thumbnails['prev'] = get_the_post_thumbnail($previous_post->ID,'thumbnail');
     foreach($thumbnails as $key => $value) {
     	if(!$value) {
-    		$thumbnails[$key] = '<img width="400" height="400" src="' . get_stylesheet_directory_uri() . '/assets/images/placeholder.png" class="attachment-thumbnail wp-post-image" />';
+    		if( get_theme_mod( 'ajs_spb_default_featured_image' ) ) {
+				$thumbnails[$key] = '<img width="400" height="400" src="' . esc_url( get_theme_mod( "ajs_spb_default_featured_image" ) ) .'" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) .'" class="attachment-thumbnail wp-post-image">';
+    		} else {
+    			$thumbnails[$key] = '<img width="400" height="400" src="' . get_stylesheet_directory_uri() . '/assets/images/placeholder.png" class="attachment-thumbnail wp-post-image" />';
+    		}
     	}
     }
     the_post_navigation( array(
