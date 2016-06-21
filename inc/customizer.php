@@ -74,6 +74,24 @@ function ajs_spb_customize_register( $wp_customize ) {
             'sanitize'    => 'html'
         )
     );
+    $wp_customize->add_section(
+        'ajs_spb_default_featured_image_section',
+        array(
+            'title'       => __( 'Default Featured Image', 'ajs_spb' ),
+            'priority'    => 30,
+            'description' => 'Upload an image to use for any posts without a featured image',
+        )
+    );
+    $wp_customize->add_setting(
+     'ajs_spb_default_featured_image'
+    );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ajs_spb', array(
+            'label'       => __( 'Default Featured Image', 'ajs_spb' ),
+            'section'     => 'ajs_spb_default_featured_image_section',
+            'settings'    => 'ajs_spb_default_featured_image',
+        )
+    ) );
+
 }
 add_action( 'customize_register', 'ajs_spb_customize_register' );
 
