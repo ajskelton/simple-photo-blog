@@ -107,7 +107,7 @@ endif;
 function ajs_spb_include_svg_icons() {
 
 	// Define SVG sprite file.
-	$svg_icons = get_template_directory() . '/assets/images/svg-icons.svg';
+	$svg_icons = get_template_directory() . '/assets/images/svg-defs.svg';
 
 	// If it exsists, include it.
 	if ( file_exists( $svg_icons ) ) {
