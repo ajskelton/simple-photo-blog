@@ -37,6 +37,13 @@ function ajs_spb_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 
+	/*
+	* Add custom logo
+	*
+	* @since WordPress 4.5.2
+	 */
+	add_theme_support( 'custom-logo' );
+
 	/**
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
