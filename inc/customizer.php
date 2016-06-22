@@ -92,6 +92,23 @@ function ajs_spb_customize_register( $wp_customize ) {
         )
     );
 
+    // Add footer social links option
+    $wp_customize->add_setting(
+        'ajs_spb_social_enable',
+        array(
+            'capability' => 'edit_theme_options',
+        )
+    );
+    $wp_customize->add_control(
+        'ajs_spb_social_enable',
+        array(
+            'label'       => esc_html__( 'Enable Social Links', 'ajs_spb' ),
+            'description' => esc_html__( 'Show any social links added to the customizer', 'ajs_spb' ),
+            'section'     => 'ajs_spb_footer_section',
+            'type'        => 'checkbox',
+        )
+    );
+
     $wp_customize->add_section(
         'ajs_spb_default_featured_image_section',
         array(
