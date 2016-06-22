@@ -15,6 +15,33 @@ function ajs_spb_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+    // Remove controls we're going to recreate
+    $wp_customize->remove_control( 'display_header_text' );
+
+    // Add options to the themes section
+    $wp_customize->add_setting(
+        'ajs_spb_display_header_text',
+        array(
+            'default' => '1',
+            'capability' => 'edit_theme_options'
+        )
+    );
+    $wp_customize->add_control(
+        'ajs_spb_display_header_text',
+        array(
+            'label' => __( 'Header Text Options', 'ajs_spb' ),
+            'section' => 'title_tagline',
+            'settings' => 'ajs_spb_display_header_text',
+            'type' => 'radio',
+            'choices' => array(
+                '1' => __( 'Logo Only', 'ajs_spb' ),
+                '2' => __( 'Site Title Only', 'ajs_spb' ),
+                '3' => __( 'Site Title and Tagline', 'ajs_spb'),
+                '4' => __( 'Disable'),
+            ),
+        )
+    );
+
 	// Add our social link options.
     $wp_customize->add_section(
         'ajs_spb_social_links_section',
