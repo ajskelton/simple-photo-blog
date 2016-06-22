@@ -336,6 +336,12 @@ textarea {
   line-height: 1.625;
 }
 
+/* line 37, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+h5,
+.h5 {
+  margin: 0.75em 0;
+}
+
 /* line 49, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 p {
   margin: 0 0 1.5rem 0;
@@ -891,7 +897,7 @@ a:hover, a:focus, a:active {
 
 /* line 102, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_navigation.scss */
 .menu li {
-  margin: 0 0.625rem 0 0;
+  margin: 0 1.5rem 0 0;
 }
 
 /* line 106, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_navigation.scss */
