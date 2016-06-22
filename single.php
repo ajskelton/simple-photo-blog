@@ -58,7 +58,6 @@ get_header(); ?>
 
 					<footer class="entry-footer">
 						<hr>
-						<?php ajs_spb_do_social_share(); ?>
 						<?php ajs_spb_entry_footer(); ?>
 					</footer><!-- .entry-footer -->
 					
