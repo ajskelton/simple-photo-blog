@@ -411,7 +411,7 @@ function ajs_spb_get_social_share() {
 	// Start the markup.
 	ob_start(); ?>
 	<div class="social-share">
-		<h5 class="social-share-title"><?php esc_html_e( 'Share This', 'ajs_spb' ); ?></h5>
+		<h5 class="social-share-title"><?php esc_html_e( 'Share This Post', 'ajs_spb' ); ?></h5>
 		<ul class="social-icons menu menu-horizontal">
 			<li class="social-icon">
 				<a href="<?php echo esc_url( $twitter_url ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=600, height=300' ); return false;">
