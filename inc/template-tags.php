@@ -525,3 +525,64 @@ function ajs_spb_front_page_index_grid() {
 	</section><!-- #index-grid -->
 	<?php
 }
+
+/**
+ * Displays the optional custom logo.
+ *
+ * Does nothing if the custom logo is not available.
+ *
+ * @since 1.0.0
+ */
+function ajs_spb_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
+}
+
+/*
+* Site branding conditionals based on the customizer options.
+*
+* @since 1.0.0
+ */
+function ajs_spb_get_site_branding() {
+	$site_branding_val = get_theme_mod( 'ajs_spb_display_header_text' );
+	switch ($site_branding_val) {
+		case '1':
+			ajs_spb_the_custom_logo();
+			break;
+
+		case '2':
+			if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php endif;
+			break;
+
+		case '3':
+			if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php endif;
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			<?php endif;
+			break;
+
+		case '4':
+			break;
+		
+		default:
+			break;
+	}
+}
+/*
+* Echo the site branding
+*
+* @since 1.0.0
+ */
+function ajs_spb_do_site_branding() {
+	echo ajs_spb_get_site_branding();
+}
