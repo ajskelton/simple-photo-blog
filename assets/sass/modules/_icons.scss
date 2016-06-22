@@ -19,12 +19,20 @@
 
 			// Set styles on those social icons!
 			.icon-#{$social-color} {
-				@include size(rem(60) rem(60));
+
+				@include size(rem(30) rem(30));
 
 				fill: #fff;
 
 				&:hover {
 					fill: $color;
+				}
+
+				@include susy-media($phone-landscape) {
+					@include size(rem(45) rem(45));
+				}
+				@include susy-media($tablet-portrait) {
+					@include size(rem(60) rem(60));
 				}
 			}
 		}
