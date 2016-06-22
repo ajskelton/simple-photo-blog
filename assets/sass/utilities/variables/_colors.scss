@@ -32,21 +32,27 @@ $color-gallery: #eeeeee;
 $color-whitesmoke: #f1f1f1;
 
 // Social Media Colors
+$color-dribbble: #0063dc;
 $color-facebook: #3b5998;
-$color-googleplus: #dd4b39;
+$color-flickr: #0063dc;
+$color-google-plus: #dd4b39;
 $color-instagram: #f77737;
 $color-linkedin: #007bb6;
 $color-pinterest: #cb2027;
 $color-rss: #ff9900;
+$color-tumblr: #0063dc;
 $color-twitter: #00aced;
+$color-vimeo: #0063dc;
 $color-youtube: #bb0000;
 
 // $social-colors() map
 $social-colors: (
+	dribbble: $color-dribbble,
 	facebook: $color-facebook,
 	facebook-square: $color-facebook,
-	googleplus: $color-googleplus,
-	googleplus-square: $color-googleplus,
+	flickr: $color-flickr,
+	google-plus: $color-google-plus,
+	google-plus-square: $color-google-plus,
 	instagram: $color-instagram,
 	linkedin: $color-linkedin,
 	linkedin-square: $color-linkedin,
@@ -54,8 +60,12 @@ $social-colors: (
 	pinterest-square: $color-pinterest,
 	rss: $color-rss,
 	rss-square: $color-rss,
+	tumblr: $color-tumblr,
+	tumblr-square: $color-tumblr,
 	twitter: $color-twitter,
 	twitter-square: $color-twitter,
+	vimeo: $color-vimeo,
+	vimeo-square: $color-vimeo,
 	youtube: $color-youtube,
 	youtube-square: $color-youtube,
 );

@@ -1441,6 +1441,18 @@ textarea {
 }
 
 /* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-dribbble {
+  height: 1.875rem;
+  width: 1.875rem;
+  fill: #fff;
+}
+
+/* line 27, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-dribbble:hover {
+  fill: #0063dc;
+}
+
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-facebook {
   height: 1.875rem;
   width: 1.875rem;
@@ -1465,26 +1477,38 @@ textarea {
 }
 
 /* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-googleplus {
+.social-icons .social-icon .icon-flickr {
   height: 1.875rem;
   width: 1.875rem;
   fill: #fff;
 }
 
 /* line 27, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-googleplus:hover {
+.social-icons .social-icon .icon-flickr:hover {
+  fill: #0063dc;
+}
+
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-google-plus {
+  height: 1.875rem;
+  width: 1.875rem;
+  fill: #fff;
+}
+
+/* line 27, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-google-plus:hover {
   fill: #dd4b39;
 }
 
 /* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-googleplus-square {
+.social-icons .social-icon .icon-google-plus-square {
   height: 1.875rem;
   width: 1.875rem;
   fill: #fff;
 }
 
 /* line 27, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-googleplus-square:hover {
+.social-icons .social-icon .icon-google-plus-square:hover {
   fill: #dd4b39;
 }
 
@@ -1573,6 +1597,30 @@ textarea {
 }
 
 /* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-tumblr {
+  height: 1.875rem;
+  width: 1.875rem;
+  fill: #fff;
+}
+
+/* line 27, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-tumblr:hover {
+  fill: #0063dc;
+}
+
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-tumblr-square {
+  height: 1.875rem;
+  width: 1.875rem;
+  fill: #fff;
+}
+
+/* line 27, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-tumblr-square:hover {
+  fill: #0063dc;
+}
+
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-twitter {
   height: 1.875rem;
   width: 1.875rem;
@@ -1594,6 +1642,30 @@ textarea {
 /* line 27, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-twitter-square:hover {
   fill: #00aced;
+}
+
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-vimeo {
+  height: 1.875rem;
+  width: 1.875rem;
+  fill: #fff;
+}
+
+/* line 27, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-vimeo:hover {
+  fill: #0063dc;
+}
+
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-vimeo-square {
+  height: 1.875rem;
+  width: 1.875rem;
+  fill: #fff;
+}
+
+/* line 27, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-vimeo-square:hover {
+  fill: #0063dc;
 }
 
 /* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
@@ -1856,6 +1928,10 @@ textarea {
   .site-branding {
     text-align: center;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-dribbble {
+    height: 2.8125rem;
+    width: 2.8125rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
   .social-icons .social-icon .icon-facebook {
     height: 2.8125rem;
     width: 2.8125rem;
@@ -1864,11 +1940,15 @@ textarea {
     height: 2.8125rem;
     width: 2.8125rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-  .social-icons .social-icon .icon-googleplus {
+  .social-icons .social-icon .icon-flickr {
     height: 2.8125rem;
     width: 2.8125rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-  .social-icons .social-icon .icon-googleplus-square {
+  .social-icons .social-icon .icon-google-plus {
+    height: 2.8125rem;
+    width: 2.8125rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-google-plus-square {
     height: 2.8125rem;
     width: 2.8125rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
@@ -1900,11 +1980,27 @@ textarea {
     height: 2.8125rem;
     width: 2.8125rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-tumblr {
+    height: 2.8125rem;
+    width: 2.8125rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-tumblr-square {
+    height: 2.8125rem;
+    width: 2.8125rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
   .social-icons .social-icon .icon-twitter {
     height: 2.8125rem;
     width: 2.8125rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
   .social-icons .social-icon .icon-twitter-square {
+    height: 2.8125rem;
+    width: 2.8125rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-vimeo {
+    height: 2.8125rem;
+    width: 2.8125rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-vimeo-square {
     height: 2.8125rem;
     width: 2.8125rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
@@ -1988,6 +2084,10 @@ textarea {
     max-width: 40rem;
     margin-bottom: 1.5em;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-dribbble {
+    height: 3.75rem;
+    width: 3.75rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
   .social-icons .social-icon .icon-facebook {
     height: 3.75rem;
     width: 3.75rem;
@@ -1996,11 +2096,15 @@ textarea {
     height: 3.75rem;
     width: 3.75rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-  .social-icons .social-icon .icon-googleplus {
+  .social-icons .social-icon .icon-flickr {
     height: 3.75rem;
     width: 3.75rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-  .social-icons .social-icon .icon-googleplus-square {
+  .social-icons .social-icon .icon-google-plus {
+    height: 3.75rem;
+    width: 3.75rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-google-plus-square {
     height: 3.75rem;
     width: 3.75rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
@@ -2032,11 +2136,27 @@ textarea {
     height: 3.75rem;
     width: 3.75rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-tumblr {
+    height: 3.75rem;
+    width: 3.75rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-tumblr-square {
+    height: 3.75rem;
+    width: 3.75rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
   .social-icons .social-icon .icon-twitter {
     height: 3.75rem;
     width: 3.75rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
   .social-icons .social-icon .icon-twitter-square {
+    height: 3.75rem;
+    width: 3.75rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-vimeo {
+    height: 3.75rem;
+    width: 3.75rem;
+  }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+  .social-icons .social-icon .icon-vimeo-square {
     height: 3.75rem;
     width: 3.75rem;
   }/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
