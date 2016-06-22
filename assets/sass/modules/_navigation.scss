@@ -93,6 +93,22 @@ a {
 			float: none;
 		}
 	}
+	.menu-item-has-children {
+		margin-right: rem(48);
+
+		& > a:after {
+			@include triangle(12px, white, down);
+			content: "";
+			position:absolute;
+			right: rem(-22);
+			top: rem(26);
+		}
+	}
+
+	ul ul .menu-item-has-children > a :after {
+		@include triangle(12px, black, left);
+		content: "";
+	}
 }
 
 // Menu defaults
@@ -101,6 +117,7 @@ a {
 
 	li {
 		margin: 0 rem(24) 0 0;
+		position: relative;
 	}
 
 	ul {
@@ -130,32 +147,57 @@ a {
 
 		// Sub-menu
 		ul {
-			@include position(absolute, rem(24) null null rem(-9999));
-
+			position: absolute;
 			background-color: $color-white;
-			box-shadow: 0 3px 3px rgba($color-black, 0.2);
 			float: left;
-			padding: rem(8);
 			z-index: 99999;
+			right:0;
+			display: none;
+			border-bottom: 1px solid black;
+
+			&:hover {
+				display: block;
+			}
 
 			// Sub-sub menu
 			ul {
-				left: rem(-9999);
-				top: 0;
+				display: none;
+				left: auto;
+				right: 100%;
+				top: -1px;
+
+				&:hover {
+					display: block;
+				}
 			}
 
 			// Sub-menu items
 			li {
+				text-align: left;
+				width: rem(200);
+				padding: rem(10);
+				border-top: 1px solid black;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+				margin: 0;
 
 				&:hover > ul,
 				&.focus > ul {
-					left: 100%;
+					display: block;
+				}
+
+				&.menu-item-has-children > a:after {
+					@include triangle(12px, black, left);
+					content: "";
+					right:rem(10);
+					top:rem(12);
 				}
 			}
 
 			// Sub-menu links
 			a {
-				@include size(rem(200) auto);
+				color: $color-black;
+				line-height: 1rem;
 			}
 
 			:hover > a,
@@ -170,7 +212,7 @@ a {
 		// Display sub-menu on hover
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			display: block;
 		}
 
 		// Menu items
