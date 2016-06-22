@@ -1354,6 +1354,8 @@ textarea {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center;
+  margin-bottom: 0.75em;
 }
 
 /* line 20, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
@@ -1370,187 +1372,192 @@ textarea {
   display: table;
 }
 
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 13, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon {
+  display: inline-block;
+}
+
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-facebook {
-  height: 1.875rem;
-  width: 1.875rem;
-  fill: #3b5998;
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-facebook:hover {
-  fill: #718dc8;
-}
-
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-facebook-square {
-  height: 1.875rem;
-  width: 1.875rem;
   fill: #3b5998;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-facebook-square {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
+}
+
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-facebook-square:hover {
-  fill: #718dc8;
+  fill: #3b5998;
 }
 
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-googleplus {
-  height: 1.875rem;
-  width: 1.875rem;
-  fill: #dd4b39;
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-googleplus:hover {
-  fill: #ec9a90;
-}
-
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-googleplus-square {
-  height: 1.875rem;
-  width: 1.875rem;
   fill: #dd4b39;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-googleplus-square:hover {
-  fill: #ec9a90;
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-googleplus-square {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
 }
 
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-googleplus-square:hover {
+  fill: #dd4b39;
+}
+
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-instagram {
-  height: 1.875rem;
-  width: 1.875rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
+}
+
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-instagram:hover {
   fill: #517fa4;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-instagram:hover {
-  fill: #92b0c9;
-}
-
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-linkedin {
-  height: 1.875rem;
-  width: 1.875rem;
-  fill: #007bb6;
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-linkedin:hover {
-  fill: #1db6ff;
-}
-
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-linkedin-square {
-  height: 1.875rem;
-  width: 1.875rem;
   fill: #007bb6;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-linkedin-square {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
+}
+
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-linkedin-square:hover {
-  fill: #1db6ff;
+  fill: #007bb6;
 }
 
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-pinterest {
-  height: 1.875rem;
-  width: 1.875rem;
-  fill: #cb2027;
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-pinterest:hover {
-  fill: #e76a6f;
-}
-
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-pinterest-square {
-  height: 1.875rem;
-  width: 1.875rem;
   fill: #cb2027;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-pinterest-square {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
+}
+
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-pinterest-square:hover {
-  fill: #e76a6f;
+  fill: #cb2027;
 }
 
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-rss {
-  height: 1.875rem;
-  width: 1.875rem;
-  fill: #ff9900;
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-rss:hover {
-  fill: #ffc266;
-}
-
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-rss-square {
-  height: 1.875rem;
-  width: 1.875rem;
   fill: #ff9900;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-rss-square {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
+}
+
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-rss-square:hover {
-  fill: #ffc266;
+  fill: #ff9900;
 }
 
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-twitter {
-  height: 1.875rem;
-  width: 1.875rem;
-  fill: #00aced;
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-twitter:hover {
-  fill: #54d0ff;
-}
-
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-twitter-square {
-  height: 1.875rem;
-  width: 1.875rem;
   fill: #00aced;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-twitter-square {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
+}
+
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-twitter-square:hover {
-  fill: #54d0ff;
+  fill: #00aced;
 }
 
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-youtube {
-  height: 1.875rem;
-  width: 1.875rem;
-  fill: #bb0000;
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon .icon-youtube:hover {
-  fill: #ff2222;
-}
-
-/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-youtube-square {
-  height: 1.875rem;
-  width: 1.875rem;
   fill: #bb0000;
 }
 
-/* line 22, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
-.social-icons .social-icon .icon-youtube-square:hover {
-  fill: #ff2222;
+/* line 21, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-youtube-square {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fff;
 }
 
-/* line 29, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+/* line 26, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
+.social-icons .social-icon .icon-youtube-square:hover {
+  fill: #bb0000;
+}
+
+/* line 33, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/modules/_icons.scss */
 .social-icons .social-icon:last-child {
   margin-right: 0;
 }
