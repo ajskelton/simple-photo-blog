@@ -67,7 +67,6 @@ cite,
 em,
 i {
 	font-style: italic;
-	display: block;
 	color: $color-black;
 }
 
@@ -83,6 +82,10 @@ q {
 	&:before,
 	&:after {
 		content: "";
+	}
+
+	cite {
+		display: block;
 	}
 }
 
@@ -117,6 +120,9 @@ acronym {
 mark,
 ins {
 	text-decoration: none;
+	color: $color-white;
+	background-color: $color-dove-gray;
+	padding: rem(2);
 }
 
 sup,
