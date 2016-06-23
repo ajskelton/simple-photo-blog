@@ -336,24 +336,61 @@ textarea {
   line-height: 1.625;
 }
 
-/* line 37, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 17, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+h1,
+.h1 {
+  font-weight: 200;
+  font-size: 2.25rem;
+}
+
+/* line 23, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+h2,
+.h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+/* line 29, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+h3,
+.h3 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+/* line 35, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+h4,
+.h4 {
+  font-size: 1.25rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+/* line 42, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 h5,
 .h5 {
+  font-size: 1rem;
   margin: 0.75em 0;
 }
 
-/* line 49, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 48, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+h6,
+.h6 {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* line 56, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 p {
   margin: 0 0 1.5rem 0;
 }
 
-/* line 53, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 60, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 b,
 strong {
   font-weight: 700;
 }
 
-/* line 58, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 65, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 dfn,
 cite,
 em,
@@ -361,26 +398,26 @@ i {
   font-style: italic;
 }
 
-/* line 65, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 72, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 blockquote,
 q {
   margin: 0 1.5rem;
   quotes: "" "";
 }
 
-/* line 70, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 77, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 blockquote:before, blockquote:after,
 q:before,
 q:after {
   content: "";
 }
 
-/* line 76, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 83, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 address {
   margin: 0 0 1.5rem 0;
 }
 
-/* line 80, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 87, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 pre {
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 0.9375rem;
@@ -391,7 +428,7 @@ pre {
   padding: 1.5rem;
 }
 
-/* line 90, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 97, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 code,
 kbd,
 tt,
@@ -400,20 +437,20 @@ var {
   font-size: 0.9375rem;
 }
 
-/* line 98, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 105, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 abbr,
 acronym {
   border-bottom: 1px dotted #666666;
   cursor: help;
 }
 
-/* line 104, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 111, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 mark,
 ins {
   text-decoration: none;
 }
 
-/* line 109, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 116, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 sup,
 sub {
   font-size: 75%;
@@ -423,27 +460,27 @@ sub {
   vertical-align: baseline;
 }
 
-/* line 118, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 125, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 sup {
   bottom: 1ex;
 }
 
-/* line 122, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 129, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 sub {
   top: 0.5ex;
 }
 
-/* line 126, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 133, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 small {
   font-size: 75%;
 }
 
-/* line 130, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 137, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 big {
   font-size: 125%;
 }
 
-/* line 135, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 142, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 .entry-title,
 .entry-content,
 .comments-title,
