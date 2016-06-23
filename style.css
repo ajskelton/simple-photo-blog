@@ -396,28 +396,34 @@ cite,
 em,
 i {
   font-style: italic;
+  display: block;
+  color: #000000;
 }
 
-/* line 72, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 74, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 blockquote,
 q {
-  margin: 0 1.5rem;
+  margin: 0 -1.5rem;
+  padding-left: 1.5rem;
+  border-left: 5px solid #000000;
   quotes: "" "";
+  color: #666666;
+  font-style: italic;
 }
 
-/* line 77, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 83, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 blockquote:before, blockquote:after,
 q:before,
 q:after {
   content: "";
 }
 
-/* line 83, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 89, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 address {
   margin: 0 0 1.5rem 0;
 }
 
-/* line 87, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 93, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 pre {
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 0.9375rem;
@@ -428,7 +434,7 @@ pre {
   padding: 1.5rem;
 }
 
-/* line 97, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 103, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 code,
 kbd,
 tt,
@@ -437,20 +443,20 @@ var {
   font-size: 0.9375rem;
 }
 
-/* line 105, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 111, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 abbr,
 acronym {
   border-bottom: 1px dotted #666666;
   cursor: help;
 }
 
-/* line 111, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 117, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 mark,
 ins {
   text-decoration: none;
 }
 
-/* line 116, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 122, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 sup,
 sub {
   font-size: 75%;
@@ -460,27 +466,27 @@ sub {
   vertical-align: baseline;
 }
 
-/* line 125, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 131, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 sup {
   bottom: 1ex;
 }
 
-/* line 129, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 135, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 sub {
   top: 0.5ex;
 }
 
-/* line 133, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 139, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 small {
   font-size: 75%;
 }
 
-/* line 137, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 143, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 big {
   font-size: 125%;
 }
 
-/* line 142, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
+/* line 148, /Applications/MAMP/htdocs/photography/wp-content/themes/simplephotoblog/assets/sass/base/_typography.scss */
 .entry-title,
 .entry-content,
 .comments-title,

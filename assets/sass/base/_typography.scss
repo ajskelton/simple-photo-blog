@@ -67,12 +67,18 @@ cite,
 em,
 i {
 	font-style: italic;
+	display: block;
+	color: $color-black;
 }
 
 blockquote,
 q {
-	margin: 0 rem(24);
+	margin: 0 rem(-24);
+	padding-left: rem(24);
+	border-left: 5px solid $color-black;
 	quotes: "" "";
+	color: $color-dove-gray;
+	font-style: italic;
 
 	&:before,
 	&:after {
