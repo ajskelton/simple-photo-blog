@@ -56,12 +56,31 @@ dd {
 
 // Tables
 
+table,
+th,
+td {
+	border: 1px solid #d1d1d1;
+}
+
 table {
 	@include size(100% auto);
-	
-	margin: 0 0 rem(24) 0;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	table-layout: fixed;
+	margin: 0 0 rem(24);
 }
 
 th {
+	border-width: 0 1px 1px 0;
 	font-weight: 700;
+}
+
+th,
+td {
+	padding: rem(16);
+}
+
+td {
+	border-width: 0 1px 1px 0;
 }
