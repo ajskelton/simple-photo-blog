@@ -101,6 +101,8 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: rem(24);
+	border: 1px solid black;
+	background-color: $color-silver;
 }
 
 code,
