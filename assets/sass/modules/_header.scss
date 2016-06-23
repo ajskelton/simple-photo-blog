@@ -49,3 +49,11 @@
 		text-align: left;
 	}
 }
+
+.custom-logo {
+	margin: 0 auto;
+
+	@include susy-media($tablet-landscape) {
+		margin: 0;
+	}
+}

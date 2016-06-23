@@ -24,7 +24,6 @@ a {
 	margin-right: auto;
 	background-color: transparent;
 	color: $color-black;
-	margin-top: rem(-36);
 
 	&:hover,
 	&:active,
@@ -70,12 +69,12 @@ a {
 		display: none;
 
 		@include susy-media($phone-landscape) {
-			display: inline-block;
+			display: block;
 		}
 
-		@include susy-media($tablet-landscape) {
-			display: inline-block;
-			line-height: rem(58);
+		@include susy-media($phone-landscape) {
+			// display: inline-block;
+			// line-height: rem(58);
 		}
 
 		li:last-child {
@@ -100,14 +99,23 @@ a {
 			@include triangle(12px, white, down);
 			content: "";
 			position:absolute;
-			right: rem(-22);
-			top: rem(26);
+			top: rem(10px);
+			margin-left: rem(10px);
+
+			@include susy-media($phone-landscape) {
+				// right: rem(-22);
+				// top: rem(26);
+			}
+			
 		}
 	}
 
 	ul ul .menu-item-has-children > a :after {
-		@include triangle(12px, black, left);
-		content: "";
+
+		@include susy-media($phone-landscape){
+			@include triangle(12px, black, left);
+			content: "";
+		}
 	}
 }
 
@@ -144,19 +152,27 @@ a {
 	}
 
 	&.dropdown {
+		@include susy-media($phone-landscape){
+			margin: rem(6) 0;
+		}
+		
 
 		// Sub-menu
 		ul {
-			position: absolute;
-			background-color: $color-white;
-			float: left;
-			z-index: 99999;
-			right:0;
 			display: none;
-			border-bottom: 1px solid black;
+			
 
 			&:hover {
 				display: block;
+			}
+
+			@include susy-media($phone-landscape) {
+				position: absolute;
+				background-color: $color-white;
+				float: left;
+				z-index: 99999;
+				right:rem(-28);
+				border-bottom: 1px solid black;
 			}
 
 			// Sub-sub menu
@@ -173,13 +189,7 @@ a {
 
 			// Sub-menu items
 			li {
-				text-align: left;
-				width: rem(200);
-				padding: rem(10);
-				border-top: 1px solid black;
-				border-right: 1px solid black;
-				border-left: 1px solid black;
-				margin: 0;
+				
 
 				&:hover > ul,
 				&.focus > ul {
@@ -187,17 +197,35 @@ a {
 				}
 
 				&.menu-item-has-children > a:after {
-					@include triangle(12px, black, left);
-					content: "";
-					right:rem(10);
-					top:rem(12);
+
+					@include susy-media($phone-landscape){
+						@include triangle(12px, black, left);
+						content: "";
+						right:rem(10);
+						top:rem(12);
+					}
+					
+				}
+
+				@include susy-media($phone-landscape) {
+					text-align: left;
+					width: rem(200);
+					padding: rem(10);
+					border-top: 1px solid black;
+					border-right: 1px solid black;
+					border-left: 1px solid black;
+					margin: 0;
 				}
 			}
 
 			// Sub-menu links
 			a {
-				color: $color-black;
-				line-height: 1rem;
+				color: $color-white;
+
+				@include susy-media($phone-landscape){
+					color: $color-black;
+					line-height: 1rem;
+				}
 			}
 
 			:hover > a,
@@ -217,8 +245,9 @@ a {
 
 		// Menu items
 		li {
-			float: left;
+			// float: left;
 			position: relative;
+			display: inline-block;
 
 			&:hover > a,
 			&.focus > a {
