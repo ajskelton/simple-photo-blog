@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Photo Blog 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-06-02 23:01:43+00:00\n"
+"POT-Creation-Date: 2016-06-25 12:24:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,23 +48,28 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:50
+#: front-page.php:36 index.php:54 page.php:40 single.php:40
+#: template-parts/content.php:36
+msgid "Pages:"
+msgstr ""
+
+#: functions.php:57
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:104
+#: functions.php:111
 msgid "Index Description"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:112
 msgid "Index Image"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:113
 msgid "Index Grid"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:122
 msgid "Widget area for %s"
 msgstr ""
 
@@ -72,104 +77,191 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:64
+#: header.php:43
 msgid "Menu"
 msgstr ""
 
-#: inc/customizer.php:22
+#: inc/customizer.php:32
+msgid "Header Text Options"
+msgstr ""
+
+#: inc/customizer.php:37
+msgid "Logo Only"
+msgstr ""
+
+#: inc/customizer.php:38
+msgid "Site Title Only"
+msgstr ""
+
+#: inc/customizer.php:39
+msgid "Site Title and Tagline"
+msgstr ""
+
+#: inc/customizer.php:40
+msgid "Disable"
+msgstr ""
+
+#: inc/customizer.php:49
 msgid "Social Links"
 msgstr ""
 
-#: inc/customizer.php:23
+#: inc/customizer.php:50
 msgid ""
 "These are the settings for social links. Please limit the number of social "
 "links to 5."
 msgstr ""
 
-#: inc/customizer.php:44
+#: inc/customizer.php:71
 msgid "%s Link"
 msgstr ""
 
-#: inc/customizer.php:55
+#: inc/customizer.php:82
 msgid "Footer Customization"
 msgstr ""
 
-#: inc/customizer.php:70
+#: inc/customizer.php:97
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer.php:71
+#: inc/customizer.php:98
 msgid "The copyright text will be displayed beneath the menu in the footer."
 msgstr ""
 
-#: inc/template-tags.php:50 inc/template-tags.php:56
+#: inc/customizer.php:115
+msgid "Enable Credits"
+msgstr ""
+
+#: inc/customizer.php:116
+msgid "Check to enable credits to WordPress and theme in the footer"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "Enable Social Links"
+msgstr ""
+
+#: inc/customizer.php:133
+msgid "Show any social links added to the customizer"
+msgstr ""
+
+#: inc/customizer.php:142 inc/customizer.php:151
+msgid "Default Featured Image"
+msgstr ""
+
+#: inc/customizer.php:164
+msgid "Front Page Settings"
+msgstr ""
+
+#: inc/customizer.php:166
+msgid "Front Page settings and options"
+msgstr ""
+
+#: inc/customizer.php:184
+msgid "Enable Most Recent Post"
+msgstr ""
+
+#: inc/customizer.php:185
+msgid "Enabling will show the most recent photo post at the top of the front page."
+msgstr ""
+
+#: inc/customizer.php:205
+msgid "Enable Index Grid"
+msgstr ""
+
+#: inc/customizer.php:206
+msgid ""
+"Enabling will show a grid of recent image posts on the bottom of the front "
+"page."
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "Index Grid Title"
+msgstr ""
+
+#: inc/customizer.php:223
+msgid "The title will show above the index grid on the front page when enabled."
+msgstr ""
+
+#: inc/customizer.php:239
+msgid "Index Grid Amount"
+msgstr ""
+
+#: inc/customizer.php:240
+msgid "Number of images to show in the Index Grid"
+msgstr ""
+
+#: inc/template-tags.php:56 inc/template-tags.php:62
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:52
+#: inc/template-tags.php:58
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:58
+#: inc/template-tags.php:64
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:64
+#: inc/template-tags.php:70
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:64
+#: inc/template-tags.php:70
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:64
+#: inc/template-tags.php:70
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:71 template-parts/content-page.php:33
+#: inc/template-tags.php:77 page.php:51
 #. translators: %s: Name of current post
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:140
+#: inc/template-tags.php:146
 msgid "Please define default parameters in the form of an array."
 msgstr ""
 
-#: inc/template-tags.php:145
+#: inc/template-tags.php:151
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: inc/template-tags.php:376
+#: inc/template-tags.php:394
 msgid "Next: "
 msgstr ""
 
-#: inc/template-tags.php:376
+#: inc/template-tags.php:394
 msgid "Next post:"
 msgstr ""
 
-#: inc/template-tags.php:377
+#: inc/template-tags.php:395
 msgid "Previous: "
 msgstr ""
 
-#: inc/template-tags.php:377
+#: inc/template-tags.php:395
 msgid "Previous post:"
 msgstr ""
 
-#: inc/template-tags.php:396
-msgid "Share This"
+#: inc/template-tags.php:414
+msgid "Share This Post"
 msgstr ""
 
-#: inc/template-tags.php:400 inc/template-tags.php:401
+#: inc/template-tags.php:418 inc/template-tags.php:419
 msgid "Share on Twitter"
 msgstr ""
 
-#: inc/template-tags.php:406 inc/template-tags.php:407
+#: inc/template-tags.php:424 inc/template-tags.php:425
 msgid "Share on Facebook"
 msgstr ""
 
-#: inc/template-tags.php:412 inc/template-tags.php:413
+#: inc/template-tags.php:430 inc/template-tags.php:431
 msgid "Share on LinkedIn"
+msgstr ""
+
+#: index.php:50 single.php:36 template-parts/content.php:32
+#. translators: %s: Name of current post.
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: search.php:20
@@ -202,15 +294,6 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#: template-parts/content-page.php:22 template-parts/content.php:43
-msgid "Pages:"
-msgstr ""
-
-#: template-parts/content.php:38
-#. translators: %s: Name of current post.
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -250,12 +333,12 @@ msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr ""
 
-#: inc/template-tags.php:28
+#: inc/template-tags.php:29
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:33
+#: inc/template-tags.php:34
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
