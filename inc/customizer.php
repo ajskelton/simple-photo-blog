@@ -37,7 +37,7 @@ function ajs_spb_customize_register( $wp_customize ) {
                 '1' => __( 'Logo Only', 'ajs_spb' ),
                 '2' => __( 'Site Title Only', 'ajs_spb' ),
                 '3' => __( 'Site Title and Tagline', 'ajs_spb'),
-                '4' => __( 'Disable'),
+                '4' => __( 'Disable', 'ajs_spb' ),
             ),
         )
     );
