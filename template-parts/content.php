@@ -33,7 +33,7 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ajs_spb' ),
 				'after'  => '</div>',
 			) );
 		?>
