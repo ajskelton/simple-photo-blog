@@ -26,12 +26,12 @@ function ajs_spb_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'ajs_spb' ),
+		esc_html_x( 'Posted on %s', 'post date', 'simple-photo-blog' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'ajs_spb' ),
+		esc_html_x( 'by %s', 'post author', 'simple-photo-blog' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -53,28 +53,28 @@ function ajs_spb_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'ajs_spb' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'simple-photo-blog' ) );
 		if ( $categories_list && ajs_spb_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'ajs_spb' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'simple-photo-blog' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'ajs_spb' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'simple-photo-blog' ) );
 		if ( $tags_list ) {
-						printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'ajs_spb' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+						printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'simple-photo-blog' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'ajs_spb' ), esc_html__( '1 Comment', 'ajs_spb' ), esc_html__( '% Comments', 'ajs_spb' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', 'simple-photo-blog' ), esc_html__( '1 Comment', 'simple-photo-blog' ), esc_html__( '% Comments', 'simple-photo-blog' ) );
 		echo '</span>';
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'ajs_spb' ),
+			esc_html__( 'Edit %s', 'simple-photo-blog' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
@@ -143,12 +143,12 @@ function ajs_spb_get_svg( $args = array() ) {
 
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
-		return esc_html__( 'Please define default parameters in the form of an array.', 'ajs_spb' );
+		return esc_html__( 'Please define default parameters in the form of an array.', 'simple-photo-blog' );
 	}
 
 	// YUNO define an icon?
 	if ( false === array_key_exists( 'icon', $args ) ) {
-		return esc_html__( 'Please define an SVG icon filename.', 'ajs_spb' );
+		return esc_html__( 'Please define an SVG icon filename.', 'simple-photo-blog' );
 	}
 
 	// Set defaults.
@@ -391,8 +391,8 @@ function ajs_spb_thumbnail_navigation() {
     	}
     }
     the_post_navigation( array(
-        'next_text' => $thumbnails['next'] . '<div class="next-text"><span class="meta-nav" aria-hidden="true">' . __( 'Next: ', 'ajs_spb' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Next post:', 'ajs_spb' ) . '</span> ',
-        'prev_text' => $thumbnails['prev'] . '<div class="prev-text"><span class="meta-nav" aria-hidden="true">' . __( 'Previous: ', 'ajs_spb' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Previous post:', 'ajs_spb' ) . '</span> ',
+        'next_text' => $thumbnails['next'] . '<div class="next-text"><span class="meta-nav" aria-hidden="true">' . __( 'Next: ', 'simple-photo-blog' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Next post:', 'simple-photo-blog' ) . '</span> ',
+        'prev_text' => $thumbnails['prev'] . '<div class="prev-text"><span class="meta-nav" aria-hidden="true">' . __( 'Previous: ', 'simple-photo-blog' ) . '</span><span class="post-title">%title</span></div> ' . '<span class="screen-reader-text">' . __( 'Previous post:', 'simple-photo-blog' ) . '</span> ',
     ) );
 }
 
@@ -411,24 +411,24 @@ function ajs_spb_get_social_share() {
 	// Start the markup.
 	ob_start(); ?>
 	<div class="social-share">
-		<h5 class="social-share-title"><?php esc_html_e( 'Share This Post', 'ajs_spb' ); ?></h5>
+		<h5 class="social-share-title"><?php esc_html_e( 'Share This Post', 'simple-photo-blog' ); ?></h5>
 		<ul class="social-icons menu menu-horizontal">
 			<li class="social-icon">
 				<a href="<?php echo esc_url( $twitter_url ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=600, height=300' ); return false;">
-					<?php ajs_spb_do_svg( array( 'icon' => 'twitter-square', 'title' => 'Twitter', 'desc' => __( 'Share on Twitter', 'ajs_spb' ) ) ); ?>
-					<span class="screen-reader-text"><?php esc_html_e( 'Share on Twitter', 'ajs_spb' ); ?></span>
+					<?php ajs_spb_do_svg( array( 'icon' => 'twitter-square', 'title' => 'Twitter', 'desc' => __( 'Share on Twitter', 'simple-photo-blog' ) ) ); ?>
+					<span class="screen-reader-text"><?php esc_html_e( 'Share on Twitter', 'simple-photo-blog' ); ?></span>
 				</a>
 			</li>
 			<li class="social-icon">
 				<a href="<?php echo esc_url( $facebook_url ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=600, height=300' ); return false;">
-					<?php ajs_spb_do_svg( array( 'icon' => 'facebook-square', 'title' => 'Facebook', 'desc' => __( 'Share on Facebook', 'ajs_spb' ) ) ); ?>
-					<span class="screen-reader-text"><?php esc_html_e( 'Share on Facebook', 'ajs_spb' ); ?></span>
+					<?php ajs_spb_do_svg( array( 'icon' => 'facebook-square', 'title' => 'Facebook', 'desc' => __( 'Share on Facebook', 'simple-photo-blog' ) ) ); ?>
+					<span class="screen-reader-text"><?php esc_html_e( 'Share on Facebook', 'simple-photo-blog' ); ?></span>
 				</a>
 			</li>
 			<li class="social-icon">
 				<a href="<?php echo esc_url( $linkedin_url ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=475, height=505' ); return false;">
-					<?php ajs_spb_do_svg( array( 'icon' => 'linkedin-square', 'title' => 'LinkedIn', 'desc' => __( 'Share on LinkedIn', 'ajs_spb' ) ) ); ?>
-					<span class="screen-reader-text"><?php esc_html_e( 'Share on LinkedIn', 'ajs_spb' ); ?></span>
+					<?php ajs_spb_do_svg( array( 'icon' => 'linkedin-square', 'title' => 'LinkedIn', 'desc' => __( 'Share on LinkedIn', 'simple-photo-blog' ) ) ); ?>
+					<span class="screen-reader-text"><?php esc_html_e( 'Share on LinkedIn', 'simple-photo-blog' ); ?></span>
 				</a>
 			</li>
 		</ul>

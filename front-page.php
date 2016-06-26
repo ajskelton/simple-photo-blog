@@ -33,7 +33,7 @@ get_header(); ?>
 							the_content();
 
 							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ajs_spb' ),
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'simple-photo-blog' ),
 								'after'  => '</div>',
 							) );
 						?>

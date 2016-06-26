@@ -37,7 +37,7 @@ get_header(); ?>
 							the_content();
 
 							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ajs_spb' ),
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'simple-photo-blog' ),
 								'after'  => '</div>',
 							) );
 						?>
@@ -48,7 +48,7 @@ get_header(); ?>
 							edit_post_link(
 								sprintf(
 									/* translators: %s: Name of current post */
-									esc_html__( 'Edit %s', 'ajs_spb' ),
+									esc_html__( 'Edit %s', 'simple-photo-blog' ),
 									the_title( '<span class="screen-reader-text">"', '"</span>', false )
 								),
 								'<span class="edit-link">',

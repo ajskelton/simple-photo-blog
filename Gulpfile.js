@@ -261,9 +261,9 @@ gulp.task('wp-pot', ['clean:pot'], function() {
 	.pipe(plumber({ errorHandler: handleErrors }))
 	.pipe(sort())
 	.pipe(wpPot({
-		domain: 'ajs_spb',
+		domain: 'simple-photo-blog',
 		destFile:'ajs_spb.pot',
-		package: 'ajs_spb',
+		package: 'simple-photo-blog',
 		bugReport: 'http://anthonyskelton.com',
 		lastTranslator: 'Anthony Skelton <anthony@anthonyskelton.com>',
 		team: 'Team <anthony@anthonyskelton.com>'

@@ -20,11 +20,11 @@ function ajs_spb_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Simple Photo Blog, use a find and replace
-	 * to change 'ajs_spb' to the name of your theme in all the template files.
+	 * to change 'simple-photo-blog' to the name of your theme in all the template files.
 	 * You will also need to update the Gulpfile with the new text domain
 	 * and matching destination POT file.
 	 */
-	load_theme_textdomain( 'ajs_spb', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'simple-photo-blog', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -54,7 +54,7 @@ function ajs_spb_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'ajs_spb' ),
+		'primary' => esc_html__( 'Primary Menu', 'simple-photo-blog' ),
 	) );
 
 	/**
@@ -108,10 +108,10 @@ function ajs_spb_widgets_init() {
 
 	// Define sidebars
 	$sidebars = array(
-		'index-description'  => esc_html__( 'Index Description', 'ajs_spb' ),
-		'index-image' => esc_html__( 'Index Image', 'ajs_spb' ),
-		'index-grid'  => esc_html__( 'Index Grid', 'ajs_spb' ),
-	//	'sidebar-3'  => esc_html__( 'Sidebar 3', 'ajs_spb' ),
+		'index-description'  => esc_html__( 'Index Description', 'simple-photo-blog' ),
+		'index-image' => esc_html__( 'Index Image', 'simple-photo-blog' ),
+		'index-grid'  => esc_html__( 'Index Grid', 'simple-photo-blog' ),
+	//	'sidebar-3'  => esc_html__( 'Sidebar 3', 'simple-photo-blog' ),
 	);
 
 	// Loop through each sidebar and register
@@ -119,7 +119,7 @@ function ajs_spb_widgets_init() {
 		register_sidebar( array(
 			'name'          => $sidebar_name,
 			'id'            => $sidebar_id,
-			'description'   => sprintf ( esc_html__( 'Widget area for %s', 'ajs_spb' ), $sidebar_name ),
+			'description'   => sprintf ( esc_html__( 'Widget area for %s', 'simple-photo-blog' ), $sidebar_name ),
 			'before_widget' => '<aside class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',

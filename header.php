@@ -26,7 +26,7 @@
 <body <?php body_class(); ?>>
 <span class="svg-defs"><?php ajs_spb_include_svg_icons(); ?></span>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'ajs_spb' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'simple-photo-blog' ); ?></a>
 
 	<header class="site-header">
 		<div class="wrap">
@@ -40,7 +40,7 @@
 			
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php ajs_spb_do_svg( array( 'icon' => 'bars', 'title' => 'Display Menu' ) ); ?><span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'ajs_spb' ); ?></span></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php ajs_spb_do_svg( array( 'icon' => 'bars', 'title' => 'Display Menu' ) ); ?><span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'simple-photo-blog' ); ?></span></button>
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'primary',

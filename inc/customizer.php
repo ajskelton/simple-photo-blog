@@ -29,15 +29,15 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'ajs_spb_display_header_text',
         array(
-            'label' => __( 'Header Text Options', 'ajs_spb' ),
+            'label' => __( 'Header Text Options', 'simple-photo-blog' ),
             'section' => 'title_tagline',
             'settings' => 'ajs_spb_display_header_text',
             'type' => 'radio',
             'choices' => array(
-                '1' => __( 'Logo Only', 'ajs_spb' ),
-                '2' => __( 'Site Title Only', 'ajs_spb' ),
-                '3' => __( 'Site Title and Tagline', 'ajs_spb'),
-                '4' => __( 'Disable', 'ajs_spb' ),
+                '1' => __( 'Logo Only', 'simple-photo-blog' ),
+                '2' => __( 'Site Title Only', 'simple-photo-blog' ),
+                '3' => __( 'Site Title and Tagline', 'simple-photo-blog'),
+                '4' => __( 'Disable', 'simple-photo-blog' ),
             ),
         )
     );
@@ -46,8 +46,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'ajs_spb_social_links_section',
         array(
-            'title'       => esc_html__( 'Social Links', 'ajs_spb' ),
-            'description' => esc_html__( 'These are the settings for social links. Please limit the number of social links to 5.', 'ajs_spb' ),
+            'title'       => esc_html__( 'Social Links', 'simple-photo-blog' ),
+            'description' => esc_html__( 'These are the settings for social links. Please limit the number of social links to 5.', 'simple-photo-blog' ),
             'priority'    => 90,
         )
     );
@@ -68,7 +68,7 @@ function ajs_spb_customize_register( $wp_customize ) {
 	    $wp_customize->add_control(
 	        'ajs_spb_' . $network . '_link',
 	        array(
-	            'label'   => sprintf( esc_html__( '%s Link', 'ajs_spb' ), ucwords( $network ) ),
+	            'label'   => sprintf( esc_html__( '%s Link', 'simple-photo-blog' ), ucwords( $network ) ),
 	            'section' => 'ajs_spb_social_links_section',
 	            'type'    => 'text',
 	        )
@@ -79,7 +79,7 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'ajs_spb_footer_section',
         array(
-            'title'    => esc_html__( 'Footer Customization', 'ajs_spb' ),
+            'title'    => esc_html__( 'Footer Customization', 'simple-photo-blog' ),
             'priority' => 90,
         )
     );
@@ -94,8 +94,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'ajs_spb_copyright_text',
         array(
-            'label'       => esc_html__( 'Copyright Text', 'ajs_spb' ),
-            'description' => esc_html__( 'The copyright text will be displayed beneath the menu in the footer.', 'ajs_spb' ),
+            'label'       => esc_html__( 'Copyright Text', 'simple-photo-blog' ),
+            'description' => esc_html__( 'The copyright text will be displayed beneath the menu in the footer.', 'simple-photo-blog' ),
             'section'     => 'ajs_spb_footer_section',
             'type'        => 'text',
             'sanitize'    => 'html'
@@ -112,8 +112,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'ajs_spb_credits_enable',
         array(
-            'label'       => esc_html__( 'Enable Credits', 'ajs_spb' ),
-            'description' => esc_html__( 'Check to enable credits to WordPress and theme in the footer', 'ajs_spb' ),
+            'label'       => esc_html__( 'Enable Credits', 'simple-photo-blog' ),
+            'description' => esc_html__( 'Check to enable credits to WordPress and theme in the footer', 'simple-photo-blog' ),
             'section'     => 'ajs_spb_footer_section',
             'type'        => 'checkbox',
         )
@@ -129,8 +129,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'ajs_spb_social_enable',
         array(
-            'label'       => esc_html__( 'Enable Social Links', 'ajs_spb' ),
-            'description' => esc_html__( 'Show any social links added to the customizer', 'ajs_spb' ),
+            'label'       => esc_html__( 'Enable Social Links', 'simple-photo-blog' ),
+            'description' => esc_html__( 'Show any social links added to the customizer', 'simple-photo-blog' ),
             'section'     => 'ajs_spb_footer_section',
             'type'        => 'checkbox',
         )
@@ -139,7 +139,7 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'ajs_spb_default_featured_image_section',
         array(
-            'title'       => __( 'Default Featured Image', 'ajs_spb' ),
+            'title'       => __( 'Default Featured Image', 'simple-photo-blog' ),
             'priority'    => 30,
             'description' => 'Upload an image to use for any posts without a featured image. The image is only used in post navigation and no image is shown on the post if no featured image is chosen. A square image of at least 400x400 is optimal. If no image is uploaded a default gray square is used.',
         )
@@ -147,8 +147,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
      'ajs_spb_default_featured_image'
     );
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ajs_spb', array(
-            'label'       => __( 'Default Featured Image', 'ajs_spb' ),
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'simple-photo-blog', array(
+            'label'       => __( 'Default Featured Image', 'simple-photo-blog' ),
             'section'     => 'ajs_spb_default_featured_image_section',
             'settings'    => 'ajs_spb_default_featured_image',
         )
@@ -161,9 +161,9 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'ajs_spb_front_page_section',
         array(
-            'title'           => __('Front Page Settings', 'ajs_spb' ),
+            'title'           => __('Front Page Settings', 'simple-photo-blog' ),
             'priority'        => 30,
-            'description'     => __( 'Front Page settings and options', 'ajs_spb' ),
+            'description'     => __( 'Front Page settings and options', 'simple-photo-blog' ),
             'active_callback' => 'is_front_page',
         )
     );
@@ -181,8 +181,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'ajs_spb_most_recent_post',
         array(
-            'label'       => esc_html__( 'Enable Most Recent Post', 'ajs_spb' ),
-            'description' => esc_html__( 'Enabling will show the most recent photo post at the top of the front page.', 'ajs_spb' ),
+            'label'       => esc_html__( 'Enable Most Recent Post', 'simple-photo-blog' ),
+            'description' => esc_html__( 'Enabling will show the most recent photo post at the top of the front page.', 'simple-photo-blog' ),
             'section'     => 'ajs_spb_front_page_section',
             'settings'    => 'ajs_spb_most_recent_post',
             'type'        => 'checkbox',
@@ -202,8 +202,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'ajs_spb_index_grid_enable',
         array(
-            'label'       => esc_html__( 'Enable Index Grid', 'ajs_spb' ),
-            'description' => esc_html__( 'Enabling will show a grid of recent image posts on the bottom of the front page.', 'ajs_spb'),
+            'label'       => esc_html__( 'Enable Index Grid', 'simple-photo-blog' ),
+            'description' => esc_html__( 'Enabling will show a grid of recent image posts on the bottom of the front page.', 'simple-photo-blog'),
             'section'     => 'ajs_spb_front_page_section',
             'settings'    => 'ajs_spb_index_grid_enable',
             'type'        => 'checkbox',
@@ -219,8 +219,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'ajs_spb_index_grid_title',
         array(
-            'label'       => esc_html__( 'Index Grid Title', 'ajs_spb' ),
-            'description' => esc_html__( 'The title will show above the index grid on the front page when enabled.', 'ajs_spb' ),
+            'label'       => esc_html__( 'Index Grid Title', 'simple-photo-blog' ),
+            'description' => esc_html__( 'The title will show above the index grid on the front page when enabled.', 'simple-photo-blog' ),
             'section'     => 'ajs_spb_front_page_section',
             'type'        => 'text',
             'sanitize'    => 'html'
@@ -236,8 +236,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'ajs_spb_index_grid_amount',
         array(
-            'label'       => esc_html__( 'Index Grid Amount', 'ajs_spb' ),
-            'description' => esc_html__( 'Number of images to show in the Index Grid', 'ajs_spb' ),
+            'label'       => esc_html__( 'Index Grid Amount', 'simple-photo-blog' ),
+            'description' => esc_html__( 'Number of images to show in the Index Grid', 'simple-photo-blog' ),
             'section'     => 'ajs_spb_front_page_section',
             'type'        => 'number',
         )
