@@ -279,6 +279,55 @@ function ajs_spb_customize_register( $wp_customize ) {
         )  
     );
 
+    /* Add EXIF Customizer Options */
+    $wp_customize->add_section(
+        'ajs_spb_exif_section',
+        array(
+            'title'             => __( 'EXIF Settings', 'simple-photo-blog' ),
+            'description'       => __( 'EXIF Camera Data display options', 'simple-photo-blog' ),
+        )
+    );
+
+    $wp_customize->add_setting(
+        'ajs_spb_exif_display',
+        array(
+            'capability'        => 'edit_theme_options',
+            'default'           => '1',
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_checkbox',
+        )
+    );
+
+    $wp_customize->add_control(
+        'ajs_spb_exif_display_control',
+        array(
+            'label'             => esc_html__( 'Enable EXIF Data on Single Posts', 'simple-photo-blog' ),
+            'description'       => esc_html__( 'Enabling will display the camera EXIF data (Camera, ISO, Aperture, Shutter, Focal Length) on a photos single post page below the description.', 'simple-photo-blog' ),
+            'section'           => 'ajs_spb_exif_section',
+            'settings'          => 'ajs_spb_exif_display',
+            'type'              => 'checkbox',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'ajs_spb_exif_title',
+        array(
+            'capability'        => 'edit_theme_options',
+            'default'           => 'EXIF Information',
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_text',
+        )
+    );
+
+    $wp_customize->add_control(
+        'ajs_spb_exif_title_control',
+        array(
+            'label'             => esc_html__( 'Title to display above EXIF information', 'simple-photo-blog' ),
+            'section'           => 'ajs_spb_exif_section',
+            'settings'          => 'ajs_spb_exif_title',
+            'type'              => 'text',
+            'sanitize'          => 'html',
+        )
+    );
+
 
 }
 add_action( 'customize_register', 'ajs_spb_customize_register' );
