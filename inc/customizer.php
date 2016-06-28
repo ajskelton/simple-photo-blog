@@ -243,6 +243,7 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_index_grid_amount',
         array(
             'default'     => 30,
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_number',
         )
     );
     $wp_customize->add_control(
@@ -327,4 +328,13 @@ function ajs_spb_sanitize_customizer_image( $input ) {
     }
 
     return $output;
+}
+
+/*
+* Sanitize our customizer number input.
+ */
+function ajs_spb_sanitize_customizer_number( $input ) {
+    if( is_numeric($input) && $input > 0) {
+        return $input;
+    }
 }
