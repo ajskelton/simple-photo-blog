@@ -107,6 +107,7 @@ function ajs_spb_customize_register( $wp_customize ) {
         array(
             'capability' => 'edit_theme_options',
             'default'    => '1',
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_checkbox',
         )
     );
     $wp_customize->add_control(
@@ -124,6 +125,8 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_social_enable',
         array(
             'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_checkbox',
+
         )
     );
     $wp_customize->add_control(
@@ -176,6 +179,7 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_most_recent_post',
         array(
             'capability'  => 'edit_theme_options',
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_checkbox',
         )
     );
     $wp_customize->add_control(
@@ -197,6 +201,7 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_index_grid_enable',
         array(
             'capability'  => 'edit_theme_options',
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_checkbox',
         )
     );
     $wp_customize->add_control(
@@ -214,6 +219,7 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_index_grid_title',
         array(
             'default'     => '',
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_text',
         )
     );
     $wp_customize->add_control(
@@ -267,4 +273,15 @@ function ajs_spb_sanitize_customizer_text( $input ) {
  */
 function ajs_spb_sanitize_customizer_url( $input ) {
     return esc_url( $input );
+}
+
+/*
+* Sanitize our customizer checkbox inputs.
+ */
+function ajs_spb_sanitize_customizer_checkbox( $input ) {
+    if( $input == 1 ) {
+        return 1;
+    } else {
+        return '';
+    }
 }
