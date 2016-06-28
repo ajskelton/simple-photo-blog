@@ -49,7 +49,6 @@ function ajs_spb_customize_register( $wp_customize ) {
         array(
             'title'       => esc_html__( 'Social Links', 'simple-photo-blog' ),
             'description' => esc_html__( 'These are the settings for social links. Please limit the number of social links to 5.', 'simple-photo-blog' ),
-            'priority'    => 90,
         )
     );
 
@@ -81,7 +80,6 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_footer_section',
         array(
             'title'    => esc_html__( 'Footer Customization', 'simple-photo-blog' ),
-            'priority' => 90,
         )
     );
 
@@ -145,7 +143,6 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_default_featured_image_section',
         array(
             'title'       => __( 'Default Featured Image', 'simple-photo-blog' ),
-            'priority'    => 30,
             'description' => 'Upload an image to use for any posts without a featured image. The image is only used in post navigation and no image is shown on the post if no featured image is chosen. A square image of at least 400x400 is optimal. If no image is uploaded a default gray square is used.',
         )
     );
@@ -171,7 +168,6 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_front_page_section',
         array(
             'title'           => __('Front Page Settings', 'simple-photo-blog' ),
-            'priority'        => 30,
             'description'     => __( 'Front Page settings and options', 'simple-photo-blog' ),
             'active_callback' => 'is_front_page',
         )
@@ -256,6 +252,33 @@ function ajs_spb_customize_register( $wp_customize ) {
         )
     );
 
+    // Add Custom CSS Testarea
+    $wp_customize->add_section(
+        'ajs_spb_custom_css_section',
+        array(
+            'title'           => __( 'Custom CSS Settings', 'simple-photo-blog' ),
+            'description'     => __( 'Add custom styles to override theme css', 'simple-photo-blog' ),
+        )
+    );
+    $wp_customize->add_setting(
+        'ajs_spb_custom_css',
+        array(
+            'default' => '',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'wp_filter_nohtml_kses',
+            'sanitize_js_callback' => 'wp_filter_nohtml_kses',
+        )
+    );
+    $wp_customize->add_control(
+        'ajs_spb_custom_css_control',
+        array(
+            'label' => __( 'Custom CSS', 'simple-photo-blog' ),
+            'section' => 'ajs_spb_custom_css_section',
+            'settings' => 'ajs_spb_custom_css',
+            'type' => 'textarea',
+        )  
+    );
+
 
 }
 add_action( 'customize_register', 'ajs_spb_customize_register' );
@@ -338,3 +361,28 @@ function ajs_spb_sanitize_customizer_number( $input ) {
         return $input;
     }
 }
+
+/*
+* Get the custom CSS from Customizer
+*
+* @since 
+ */
+function ajs_spb_get_customizer_custom_css() {
+    if( get_theme_mod( 'ajs_spb_custom_css') ) {
+        ?>
+        <style type="text/css">
+            <?php echo get_theme_mod( 'ajs_spb_custom_css' ); ?>
+        </style>
+        <?php
+    }
+}
+
+/*
+* Echo the custom css and hook it into wp_head
+*
+* @since 
+ */
+function ajs_spb_do_customizer_custom_css() {
+    echo ajs_spb_get_customizer_custom_css();
+}
+add_action( 'wp_head', 'ajs_spb_do_customizer_custom_css' );
