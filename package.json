@@ -1,14 +1,14 @@
 {
-  "name": "_s",
+  "name": "Simple Photo Blog",
   "version": "1.0.0",
-  "description": "A theme boilerplate for WebDevStudios.",
-  "author": "WebDevStudios",
+  "description": "A Simple Theme For Photo Bloggers",
+  "author": "Anthony Skelton",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WebDevStudios/wd_s"
+    "url": "https://github.com/ajskelton/simple-photo-blog"
   },
   "bugs": {
-    "url": "https://github.com/WebDevStudios/wd_s/issues/"
+    "url": "https://github.com/ajskelton/simple-photo-blog/issues"
   },
   "dependencies": {
     "autoprefixer": "^6.3.2",
