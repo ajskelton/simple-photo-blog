@@ -42,15 +42,17 @@ get_header(); ?>
 								) );
 							?>
 							<?php
-								if( has_post_format( 'image', get_the_id() ) ){
-							?>
-								<div class="image-meta">
-									<hr>
-									<h3>EXIF Information</h3>
-									<?php ajs_spb_get_exif_info(); ?>
-								</div><!-- .image-meta -->
-							<?php
-								} // End if has_post_format
+								if( has_post_format( 'image', get_the_id() ) ) :
+									if( get_theme_mod( 'ajs_spb_exif_display' ) ) :
+									?>
+									<div class="image-meta">
+										<hr>
+										<h3><?php echo get_theme_mod( 'ajs_spb_exif_title' ); ?></h3>
+										<?php ajs_spb_get_exif_info(); ?>
+									</div><!-- .image-meta -->
+									<?php
+									endif; // End get_theme_mod check
+								endif; // End has_post_format check
 							?>
 						</div><!-- .entry-description -->
 
