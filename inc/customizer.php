@@ -89,7 +89,8 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'ajs_spb_copyright_text',
         array(
-            'default' => ''
+            'default' => '',
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_text',
         )
     );
     $wp_customize->add_control(
