@@ -23,7 +23,8 @@ function ajs_spb_customize_register( $wp_customize ) {
         'ajs_spb_display_header_text',
         array(
             'default' => '1',
-            'capability' => 'edit_theme_options'
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_radio',
         )
     );
     $wp_customize->add_control(
@@ -281,6 +282,24 @@ function ajs_spb_sanitize_customizer_url( $input ) {
 function ajs_spb_sanitize_customizer_checkbox( $input ) {
     if( $input == 1 ) {
         return 1;
+    } else {
+        return '';
+    }
+}
+
+/*
+* Sanitize our customizer radio inputs.
+ */
+function ajs_spb_sanitize_customizer_radio( $input ) {
+    $valid = array(
+        '1' => __( 'Logo Only', 'simple-photo-blog' ),
+        '2' => __( 'Site Title Only', 'simple-photo-blog' ),
+        '3' => __( 'Site Title and Tagline', 'simple-photo-blog'),
+        '4' => __( 'Disable', 'simple-photo-blog' ),
+    );
+
+    if ( array_key_exists($input , $valid ) ) {
+        return $input;
     } else {
         return '';
     }
