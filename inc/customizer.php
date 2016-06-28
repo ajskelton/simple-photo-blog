@@ -150,7 +150,11 @@ function ajs_spb_customize_register( $wp_customize ) {
         )
     );
     $wp_customize->add_setting(
-     'ajs_spb_default_featured_image'
+        'ajs_spb_default_featured_image',
+        array(
+            'sanitize_callback' => 'ajs_spb_sanitize_customizer_image',
+        )
+
     );
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'simple-photo-blog', array(
             'label'       => __( 'Default Featured Image', 'simple-photo-blog' ),
@@ -304,4 +308,23 @@ function ajs_spb_sanitize_customizer_radio( $input ) {
     } else {
         return '';
     }
+}
+
+/*
+* Sanitize our customizer image uploader
+ */
+function ajs_spb_sanitize_customizer_image( $input ) {
+    /* default output */
+    $output = '';
+
+    /* check file type */
+    $filetype = wp_check_filetype( $input );
+    $mime_type = $filetype['type'];
+
+    /* only mime type "image" allowed */
+    if ( strpos( $mime_type, 'image' ) !== false ) {
+        $output = $input;
+    }
+
+    return $output;
 }
