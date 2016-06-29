@@ -23,21 +23,41 @@ get_header(); ?>
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
+				?>
 
-					/**
-					 * Run the loop for the search to output the results.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-search.php and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', 'search' );
+					<article <?php post_class(); ?>>
+						<header class="entry-header">
+							<a href="<?php echo the_permalink(); ?>">
+							<?php 
+								if(has_post_thumbnail()){
+									ajs_spb_do_post_image( $size = 'full' );
+								}
+							?>
+							</a>
+							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+							<?php if ( 'post' === get_post_type() ) : ?>
+							<div class="entry-meta">
+								<?php ajs_spb_posted_on(); ?>
+							</div><!-- .entry-meta -->
+							<?php endif; ?>
+						</header><!-- .entry-header -->
+
+						<div class="entry-summary">
+							<?php the_excerpt(); ?>
+						</div><!-- .entry-summary -->
+
+						<footer class="entry-footer">
+							<?php ajs_spb_entry_footer(); ?>
+						</footer><!-- .entry-footer -->
+						<hr>
+					</article><!-- #post-## -->
+
+				<?php
 
 				endwhile;
 
-				the_posts_navigation();
-
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
+				ajs_spb_do_posts_navigation();
 
 			endif; ?>
 
