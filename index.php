@@ -28,7 +28,7 @@ get_header(); ?>
 					<a href="<?php echo the_permalink(); ?>">
 						<?php 
 						if(has_post_thumbnail()){
-							ajs_spb_do_post_image( $size = 'blog-features' );
+							ajs_spb_do_post_image( $size = 'full' );
 						}
 						?>
 					</a> <!-- .featured-image -->
