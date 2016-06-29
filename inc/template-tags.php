@@ -586,3 +586,26 @@ function ajs_spb_get_site_branding() {
 function ajs_spb_do_site_branding() {
 	echo ajs_spb_get_site_branding();
 }
+
+
+/*
+* Setup the posts navigation
+*
+* @since 
+ */
+function ajs_spb_posts_navigation() {
+	$args = array(
+		'mid_size' => 3,
+		'type' => 'list',
+	);
+	return paginate_links( $args );
+}
+
+function ajs_spb_do_posts_navigation() {
+	?>
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text">Posts Navigation</h2>
+		<?php echo ajs_spb_posts_navigation() ?>
+	</nav>
+	<?php
+}
