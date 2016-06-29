@@ -72,11 +72,11 @@ get_header(); ?>
 				</article><!-- #post-## -->
 				<?php 
 
-				endwhile;
+				endwhile; /* End the Loop */
 
 			endif; ?>
 			</section><!-- .section -->
-			<?php the_posts_navigation(); ?>
+			<?php ajs_spb_do_posts_navigation(); ?>
 		</main><!-- #main -->
 	</div><!-- .primary -->
 </div><!-- .wrap -->
