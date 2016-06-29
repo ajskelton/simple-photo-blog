@@ -618,10 +618,10 @@ function ajs_spb_do_posts_navigation() {
 function ajs_spb_get_social_icons() {
 	if( get_theme_mod( 'ajs_spb_social_enable' ) ) : ?>
 		<ul class="social-icons">
-			<?php if( get_theme_mod( 'ajs_spb_dribble_link' ) ) : ?>
+			<?php if( get_theme_mod( 'ajs_spb_dribbble_link' ) ) : ?>
 			<li class="social-icon">
-				<a href="<?php echo get_theme_mod( 'ajs_spb_dribble_link' ); ?>">
-					<?php ajs_spb_do_svg( $args = array( 'icon' => 'dribble') ); ?>
+				<a href="<?php echo get_theme_mod( 'ajs_spb_dribbble_link' ); ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'dribbble') ); ?>
 				</a>
 			</li>
 			<?php endif; // end if dribble ?>
