@@ -609,3 +609,102 @@ function ajs_spb_do_posts_navigation() {
 	</nav>
 	<?php
 }
+
+/*
+* Get the list of social media icons
+*
+* @since 1.0.0
+ */
+function ajs_spb_get_social_icons() {
+	if( get_theme_mod( 'ajs_spb_social_enable' ) ) : ?>
+		<ul class="social-icons">
+			<?php if( get_theme_mod( 'ajs_spb_dribble_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_dribble_link' ); ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'dribble') ); ?>
+				</a>
+			</li>
+			<?php endif; // end if dribble ?>
+			<?php if( get_theme_mod( 'ajs_spb_facebook_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_facebook_link' ); ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'facebook-square') ); ?>
+				</a>
+			</li>
+			<?php endif; // end if facebook ?>
+			<?php if( get_theme_mod( 'ajs_spb_flickr_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_flickr_link' ); ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'flickr') ); ?>
+				</a>
+			</li>
+			<?php endif; // end if flickr ?>
+			<?php if( get_theme_mod( 'ajs_spb_google-plus_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_google-plus_link' ); ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'google-plus-square') ); ?>
+				</a>
+			</li>
+			<?php endif; // end if google-plus ?>
+			<?php if( get_theme_mod( 'ajs_spb_instagram_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_instagram_link' ) ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'instagram' ) ); ?>
+				</a>
+			</li>
+			<?php endif; // end if instagram ?>
+			<?php if( get_theme_mod( 'ajs_spb_linkedin_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_linkedin_link' ) ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'linkedin-square' ) ); ?>
+				</a>
+			</li>
+			<?php endif; // end if linkedin ?>
+			<?php if( get_theme_mod( 'ajs_spb_pinterest_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_pinterest_link' ) ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'pinterest-square' ) ); ?>
+				</a>
+			</li>
+			<?php endif; // end if pinterest ?>
+			<?php if( get_theme_mod( 'ajs_spb_tumblr_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_tumblr_link' ) ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'tumblr-square' ) ); ?>
+				</a>
+			</li>
+			<?php endif; // end if tumblr ?>
+			<?php if( get_theme_mod( 'ajs_spb_twitter_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_twitter_link' ) ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'twitter-square' ) ); ?>
+				</a>
+			</li>
+			<?php endif; // end if twitter ?>
+			<?php if( get_theme_mod( 'ajs_spb_vimeo_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_vimeo_link' ) ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'vimeo-square' ) ); ?>
+				</a>
+			</li>
+			<?php endif; // end if vimeo ?>
+			<?php if( get_theme_mod( 'ajs_spb_youtube_link' ) ) : ?>
+			<li class="social-icon">
+				<a href="<?php echo get_theme_mod( 'ajs_spb_youtube_link' ) ?>">
+					<?php ajs_spb_do_svg( $args = array( 'icon' => 'youtube-square' ) ); ?>
+				</a>
+			</li>
+			<?php endif; // end if youtube ?>
+			
+		</ul>
+	<?php endif;  // end if get theme mod
+}
+
+/*
+* Echo out the social media icons
+*
+* @since 1.0.0
+ */
+function ajs_spb_do_social_icons() {
+	echo ajs_spb_get_social_icons();
+}
