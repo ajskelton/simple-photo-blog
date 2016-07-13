@@ -17,6 +17,7 @@ function ajs_spb_customize_register( $wp_customize ) {
 
     // Remove controls we're going to recreate
     $wp_customize->remove_control( 'display_header_text' );
+    $wp_customize->remove_control( 'background_color' );
 
     // Add options to the themes section
     $wp_customize->add_setting(
@@ -42,6 +43,56 @@ function ajs_spb_customize_register( $wp_customize ) {
             ),
         )
     );
+
+    // Add custom colors to the colors section
+    $ajs_spb_custom_colors[] = array(
+        'slug' => 'background_color',
+        'default' => '#fff',
+        'label' => esc_html__( 'Background Color', 'simple-photo-blog' ),
+    );
+    $ajs_spb_custom_colors[] = array(
+        'slug' => 'header_background_color',
+        'default' => '#666',
+        'label' => esc_html__( 'Header Background Color', 'simple-photo-blog' ),
+    );
+    $ajs_spb_custom_colors[] = array(
+        'slug' => 'header_text_color',
+        'default' => '#fff',
+        'label' => esc_html__( 'Header Text Color', 'simple-photo-blog' ),
+    );
+    $ajs_spb_custom_colors[] = array(
+        'slug' => 'text_color',
+        'default' => '#000',
+        'label' => esc_html__( 'Text Color', 'simple-photo-blog' ),
+    );
+    $ajs_spb_custom_colors[] = array(
+        'slug' => 'link_color',
+        'default' => '#000',
+        'label' => esc_html__( 'Link Color', 'simple-photo-blog' ),
+    );
+    foreach( $ajs_spb_custom_colors as $color ) {
+
+        // SETTINGS
+        $wp_customize->add_setting(
+            'ajs_spb_custom_colors[' . $color['slug'] . ']',
+            array(
+                'default' => $color['default'],
+                'capability' => 'edit_theme_options',
+            )
+        );
+        // CONTROLS
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'ajs_spb_' . $color['slug'],
+                array(
+                    'label' => $color['label'],
+                    'section' => 'colors',
+                    'settings' => 'ajs_spb_custom_colors[' . $color['slug'] . ']'
+                )
+            )
+        );
+    }
 
 	// Add our social link options.
     $wp_customize->add_section(
@@ -435,3 +486,103 @@ function ajs_spb_do_customizer_custom_css() {
     echo ajs_spb_get_customizer_custom_css();
 }
 add_action( 'wp_head', 'ajs_spb_do_customizer_custom_css' );
+
+/*
+* Insert custom colors in the wp_head
+*
+* @since 1.0.0
+ */
+function ajs_spb_customizer_head_styles() {
+    if( get_theme_mod( 'ajs_spb_custom_colors' ) ) {
+        $ajs_spb_custom_colors = get_theme_mod( 'ajs_spb_custom_colors' );
+    }
+    ?>
+    <style>
+    <?php
+    foreach ($ajs_spb_custom_colors as $key => $value) {
+        switch ($key) {
+            case 'background_color':
+                if( $value == '#fff' || $value == '#ffffff' ) {
+                    break;
+                }
+                ?>
+                body {
+                    background-color: <?php echo $value ?>;
+                }
+                <?php
+                break;
+
+            case 'header_background_color':
+                if( $value == '#666' || $value == '#666666') {
+                    break;
+                }
+                ?>
+                .site-header,
+                .site-footer {
+                    background-color: <?php echo $value ?>;
+                }
+                @media (min-width: 40rem) {
+                    .menu.dropdown ul {
+                        background-color: <?php echo $value ?>;
+                    }
+                }
+                <?php
+                break;
+
+            case 'header_text_color':
+                if( $value == '#fff' || $value == '#ffffff' ) {
+                    break;
+                }
+                ?>
+                .site-header,
+                .site-header a,
+                .site-footer,
+                .site-footer a,
+                .site-title a,
+                .menu-toggle .menu-toggle-text,
+                .menu.dropdown ul a {
+                    color: <?php echo $value ?>;
+                }
+                .main-navigation .menu-item-has-children>a:after {
+                    border-top: 6px solid <?php echo $value ?>;
+                }
+                .menu-toggle .icon {
+                    fill: <?php echo $value ?>;
+                }
+
+                <?php
+                break;
+
+            case 'text_color':
+                if( $value == '#000' || $value == '#000000' ) {
+                    break;
+                }
+                ?>
+                body {
+                    color: <?php echo $value ?>;
+                } 
+                <?php
+                break;
+
+            case 'link_color':
+                if( $value == '#000' || $value == '#000000' ) {
+                    break;
+                }
+                ?>
+                .site-content a,
+                .site-content a:active,
+                .site-content a:focus,
+                .site-content a:hover,
+                .site-content a:visited {
+                    color: <?php echo $value ?>;
+                }
+                .entry-title a {
+                    border-color: <?php echo $value ?>;
+                }
+
+                <?php
+                break;
+        }
+    }
+}
+add_action( 'wp_head', 'ajs_spb_customizer_head_styles' );
