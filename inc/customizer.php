@@ -238,7 +238,7 @@ function ajs_spb_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'ajs_spb_index_grid_amount',
         array(
-            'default'     => 30,
+            'default'     => 10,
             'sanitize_callback' => 'ajs_spb_sanitize_customizer_number',
         )
     );
