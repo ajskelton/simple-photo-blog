@@ -24,7 +24,7 @@
 				<span>Proudly powered by </span>
 				<a href="http://www.wordpress.org">WordPress</a>
 				<span> / Theme: </span>
-				<a href="http://anthonyskelton.com/simplephotoblog">Simple Photo Blog</a> by <a href="http://anthonyskelton.com">Anthony Skelton</a>
+				<a href="http://anthonyskelton.com/simplephotoblog">Simple Photo Blog</a> by Anthony Skelton
 			</div>
 			<?php } ?>
 
