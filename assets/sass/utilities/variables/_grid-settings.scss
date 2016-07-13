@@ -17,10 +17,10 @@ $susy: (
 );
 
 // Setup Breakpoint Slices
-$mqs-phone-portrait: max-width ($phone-portrait - 1);
+$mqs-phone-portrait: max-width $phone-portrait;
 $mqs-phone-landscape: $phone-portrait $phone-landscape;
-$mqs-tablet-portrait: ($phone-landscape + 1) $tablet-portrait;
-$mqs-tablet-landscape: ($tablet-portrait + 1) $tablet-landscape;
-$mqs-desktop: ($tablet-landscape + 1) $desktop;
-$mqs-large-desktop: ($desktop + 1) ($large-desktop - 1);
+$mqs-tablet-portrait: $phone-landscape $tablet-portrait;
+$mqs-tablet-landscape: $tablet-portrait $tablet-landscape;
+$mqs-desktop: $tablet-landscape $desktop;
+$mqs-large-desktop: $desktop $large-desktop;
 $mqs-xl-desktop: $large-desktop;
