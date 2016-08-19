@@ -78,6 +78,7 @@ function ajs_spb_customize_register( $wp_customize ) {
             array(
                 'default' => $color['default'],
                 'capability' => 'edit_theme_options',
+                'transport' => 'postMessage',
             )
         );
         // CONTROLS
@@ -273,6 +274,7 @@ function ajs_spb_customize_register( $wp_customize ) {
         array(
             'default'     => '',
             'sanitize_callback' => 'ajs_spb_sanitize_customizer_text',
+            'transport' => 'postMessage',
         )
     );
     $wp_customize->add_control(
@@ -291,6 +293,7 @@ function ajs_spb_customize_register( $wp_customize ) {
         array(
             'default'     => 10,
             'sanitize_callback' => 'ajs_spb_sanitize_customizer_number',
+            'transport' => 'postMessage',
         )
     );
     $wp_customize->add_control(
