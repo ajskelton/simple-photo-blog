@@ -511,7 +511,7 @@ function ajs_spb_front_page_index_grid() {
 	) );
 	$index_grid = wp_get_recent_posts( $args );
 	?>
-	<h2><?php echo $index_grid_title ?></h2>
+	<h2 class="index-grid-title"><?php echo $index_grid_title ?></h2>
 	<section id="index-grid">
 	<?php
 		foreach( $index_grid as $grid_item) { ?>
