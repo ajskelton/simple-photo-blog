@@ -12,12 +12,14 @@
  * @package Simple Photo Blog
  */
 
-get_header(); ?>
+get_header(); 
 
+$front_page_images = ajs_spb_front_page_setup();
+?>
 	<div class="wrap">
 	<?php 
 		if( get_theme_mod( 'ajs_spb_most_recent_post' ) ){
-			ajs_spb_front_page_most_recent_post();
+			ajs_spb_front_page_most_recent_post($front_page_images);
 		}
 	?>
 		<div class="primary content-area">
@@ -43,7 +45,7 @@ get_header(); ?>
 				
 				<?php 
 					if( get_theme_mod( 'ajs_spb_index_grid_enable' ) ) {
-						ajs_spb_front_page_index_grid();
+						ajs_spb_front_page_index_grid($front_page_images);
 					}
 			 	?>
 

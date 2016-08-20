@@ -445,6 +445,62 @@ function ajs_spb_do_social_share() {
 	echo ajs_spb_get_social_share();
 }
 
+
+/*
+* Front Page Setup
+*
+* Check which options are enabled on the front page and return the WP_Query
+* for the entire front page.
+*
+* @since 1.0.0
+ */
+function ajs_spb_front_page_setup() {
+	$index_grid_amount = get_theme_mod( 'ajs_spb_index_grid_amount' );
+
+	if( get_theme_mod('ajs_spb_most_recent_post') && get_theme_mod( 'ajs_spb_index_grid_enable' ) ) {
+		$index_grid_amount++;
+		$args = array(
+			'numberposts' => strval($index_grid_amount),
+			'post_status' => 'publish',
+			'offset' => 0,
+			'tax_query' => array(
+					array(
+						'taxonomy' => 'post_format',
+						'field' => 'slug',
+						'terms' => 'post-format-image',
+						'operator' => 'IN'
+					),
+		) );
+		return wp_get_recent_posts( $args );
+	} elseif ( get_theme_mod( 'ajs_spb_most_recent_post' ) ) {
+		$args = array(
+			'numberposts' => 1,
+			'post_status' => 'publish',
+			'tax_query' => array(
+					array(
+						'taxonomy' => 'post_format',
+						'field' => 'slug',
+						'terms' => 'post-format-image',
+						'operator' => 'IN'
+					),
+		) );
+		return wp_get_recent_posts( $args );
+	} elseif ( get_theme_mod( 'ajs_spb_index_grid_enable') ) {
+		$args = array(
+			'numberposts' => strval($index_grid_amount),
+			'post_status' => 'publish',
+			'tax_query' => array(
+					array(
+						'taxonomy' => 'post_format',
+						'field' => 'slug',
+						'terms' => 'post-format-image',
+						'operator' => 'IN'
+					),
+		) );
+		return wp_get_recent_posts( $args );
+	}
+}
+
 /*
 * Front page most recent post
 *
@@ -452,30 +508,18 @@ function ajs_spb_do_social_share() {
 *
 * @since 1.0.0
  */
-function ajs_spb_front_page_most_recent_post() {
-	$args = array( 
-		'numberposts' => '1',
-		'post_status' => 'publish',
-		'tax_query' => array(
-				array(
-					'taxonomy' => 'post_format',
-					'field' => 'slug',
-					'terms' => 'post-format-image',
-					'operator' => 'IN'
-				),
-	) );
-	$most_recent_post = wp_get_recent_posts( $args );
-	$featured_image = get_the_post_thumbnail( $most_recent_post[0]['ID'], 'full' );
+function ajs_spb_front_page_most_recent_post( $front_page_images ) {
+	$featured_image = get_the_post_thumbnail( $front_page_images[0]['ID'], 'full' );
 	?>
-		<a href="<?php echo $most_recent_post[0]['guid'] ?>">
+		<a href="<?php echo $front_page_images[0]['guid'] ?>">
 			<?php echo $featured_image; ?>
 		</a>
 		<div class="entry-content">
 			<h2 class="entry-title">
-				<a href="<?php echo $most_recent_post[0]['guid'] ?>"><?php echo $most_recent_post[0]['post_title']?></a>
+				<a href="<?php echo $front_page_images[0]['guid'] ?>"><?php echo $front_page_images[0]['post_title']?></a>
 			</h2>
 			<?php ajs_spb_posted_on(); ?>
-			<p class="entry-description"><?php echo $most_recent_post[0]['post_excerpt'] ?></p>
+			<p class="entry-description"><?php echo $front_page_images[0]['post_excerpt'] ?></p>
 		</div> <!-- .entry-content -->
 		<hr>
 	<?php
@@ -488,36 +532,16 @@ function ajs_spb_front_page_most_recent_post() {
 *
 * @since 1.0.0
  */
-function ajs_spb_front_page_index_grid() {
-	$index_grid_amount = get_theme_mod( 'ajs_spb_index_grid_amount' );
+function ajs_spb_front_page_index_grid($grid_item) {
 	$index_grid_title = get_theme_mod( 'ajs_spb_index_grid_title' );
-	// Check if most recent image is being used at top of front page, else include in index grid
-	if( get_theme_mod( 'ajs_spb_most_recent_post') ){
-		$offset = 1;
-	} else {
-		$offset = 0;
-	}
-	$args = array(
-		'numberposts' => strval($index_grid_amount),
-		'post_status' => 'publish',
-		'offset' => $offset,
-		'tax_query' => array(
-				array(
-					'taxonomy' => 'post_format',
-					'field' => 'slug',
-					'terms' => 'post-format-image',
-					'operator' => 'IN'
-				),
-	) );
-	$index_grid = wp_get_recent_posts( $args );
 	?>
 	<h2 class="index-grid-title"><?php echo $index_grid_title ?></h2>
 	<section id="index-grid">
 	<?php
-		foreach( $index_grid as $grid_item) { ?>
+		for( $i = 1 ; $i < count($grid_item); $i++) { ?>
 			<div class="index-grid">
-				<a href="<?php echo $grid_item['guid'] ?>">
-					<?php echo get_the_post_thumbnail( $grid_item['ID'], 'thumbnail' )?>
+				<a href="<?php echo $grid_item[$i]['guid'] ?>">
+					<?php echo get_the_post_thumbnail( $grid_item[$i]['ID'], 'thumbnail' )?>
 				</a>
 			</div>
 		<?php }
