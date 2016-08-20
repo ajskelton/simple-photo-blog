@@ -79,6 +79,7 @@ function ajs_spb_customize_register( $wp_customize ) {
                 'default' => $color['default'],
                 'capability' => 'edit_theme_options',
                 'transport' => 'postMessage',
+                'sanitize_callback' => 'sanitize_hex_color',
             )
         );
         // CONTROLS
